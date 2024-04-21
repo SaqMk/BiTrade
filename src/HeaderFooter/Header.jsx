@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from "./header.module.css"
 import HeaderIcon from "../images/HeaderIcon.svg"
-
+import { Link } from 'react-router-dom'
 export default function Header() {
 
   return (
     <div className={styles.container}>
-        <img className={styles.HeaderIcon} src={HeaderIcon}></img>
+        <Link to="/"><img className={styles.HeaderIcon} src={HeaderIcon}></img></Link>
         <div className={styles.menu}>
-            <p>FREE DEMO</p>
-            <p>ABOUT US</p>
+            <p className={styles.freeDemo}>FREE DEMO</p>
+            <Link style={{textDecoration:'none',color:'white'}} to="/about"><p className={styles.aboutUs}>ABOUT US</p></Link>
         </div>
         <div className={styles.regLog}>
             <div className={styles.lan}>

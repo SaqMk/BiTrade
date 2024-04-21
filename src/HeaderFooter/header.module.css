@@ -20,11 +20,18 @@
     justify-content: space-between;
     width: 12vw;
 }
-.menu p{
+.freeDemo{
     cursor: pointer;
     transition: 0.5s;
 }
-.menu p:hover{
+.freeDemo:hover{
+    color: #5B8651;
+}
+.aboutUs{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.aboutUs:hover{
     color: #5B8651;
 }
 .regLog{
