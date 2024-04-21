@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 83vh;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 86%;
+  height: 68vh;
+}
+.title {
+  font-size: 3vw;
+}
+.advantagesContent {
+  width: 57vw;
+  height: 53vh;
+}
+.adContent {
+  display: flex;
+  align-items: center;
+  margin-top: 0.8vw;
+}
+.ptichkaIcon {
+  width: 2.4vw;
+}
+.content {
+  font-size: 1.1vw;
+  margin-left: 1vw;
+}

@@ -34,35 +34,30 @@
     margin-top: 1vw;
     box-shadow: 1px 3px 3px gray;
     cursor: pointer;
-    transition: 0.2s;
-
-}
-.items:hover{
-    background: linear-gradient(#96cb8a,#042D01);
-    transition: 0.2s;
-}
-.items:hover p{
-   color: white;
-   transition: 0.5s;
-}
-.items:first-child{
-    background: linear-gradient(#96cb8a,#042D01);
-    transition: 0.2s;
-
-}
-.items:first-child p{
-   color: white;
-   transition: 0.2s;
-
+    transition: 0.4s;
 }
 .title{
     font-family: "Barlow Semi Condensed", sans-serif;
     font-size: 2vw;
-    color: black;
+}
+.active{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 19.4vw;
+    height: 51vh;
+    border-radius:1vw;
+    margin-top: 1vw;
+    box-shadow: 1px 3px 3px gray;
+    background: linear-gradient(0.5turn,#2B3D31,#59725f);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+
 }
 .content{
     font-family: "Barlow Semi Condensed", sans-serif;
     font-size: 1.2vw;
-    color: black;
     text-align: center;
 }

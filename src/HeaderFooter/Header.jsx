@@ -19,8 +19,12 @@ export default function Header() {
         </div>
         <div className={styles.regLog}>
           <div className={styles.lan}></div>
-          <button className={styles.button}>Register</button>
-          <button className={styles.button}>Login</button>
+          <Link style={{ textDecoration: "none", color: "white" }} to="/register">
+            <button className={styles.buttonReg}>Register</button>
+          </Link>
+          <Link style={{ textDecoration: "none", color: "white" }} to="/login">
+            <button className={styles.buttonLog}>Login</button>
+          </Link>
         </div>
       </div>
     </div>
