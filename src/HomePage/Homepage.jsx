@@ -6,6 +6,7 @@ import HomeSectionTrade from './HomeSectionTrade/HomeSectionTrade'
 import HomeSectionChoose from './HomeSectionChoose/HomeSectionChoose'
 import Footer from '../HeaderFooter/Footer'
 import HomeCarousel from './HomeCarousel/HomeCarousel'
+import HomeFreeAccount from './HomeFreeAccount/HomeFreeAccount'
 
 export default function Homepage() {
   return (
@@ -16,6 +17,7 @@ export default function Homepage() {
        <HomeCarousel/>
        <HomeSectionChoose/>
        <HomeSectionTrade/>
+       <HomeFreeAccount />
        <Footer/>
     </>
   )
