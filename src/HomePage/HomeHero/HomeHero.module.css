@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 127vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../images/HomeHero.svg");
+}
+.wrapper {
+  width: 87%;
+  height: 52.2vh;
+  margin-top: 47vh;
+}
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 40vw;
+  height: 100%;
+}
+.title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 3.2vw;
+  color: white;
+}
+.content {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.3vw;
+  color: white;
+}
+.button{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2vw;
+  color: white;
+  border: none;
+  width: 8.6vw;
+  height:7vh;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.8vw;
+  background: linear-gradient(0.25turn,#5B8651,#042D01);
+}

@@ -1,0 +1,59 @@
+.container{
+    z-index: 5;
+    position: fixed;
+    left: 6.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87%;
+    height: 18vh;
+}
+.HeaderIcon{
+    width: 9vw;
+    height: 3.8vh;
+}
+.menu{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 1.2vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+}
+.menu p{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu p:hover{
+    color: #5B8651;
+}
+.regLog{
+    display: flex;
+    justify-content: space-between;
+    width: 22vw;
+}
+.lan{
+    width: 5vw;
+    border: 1px solid;
+}
+
+.button{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2vw;
+  color: white;
+  border: none;
+  width: 8.6vw;
+  height:7vh;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.8vw;
+}
+.button:last-child{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 1.2vw;
+    color: white;
+    background: linear-gradient(0.25turn,#5B8651,#042D01);
+}
+img{
+    cursor: pointer;
+}

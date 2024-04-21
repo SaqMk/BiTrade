@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 115vh;
+}
+.item{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 49.6%;
+    height: 57vh;
+    background: linear-gradient(0.25turn,#2B3D31,#405545);
+    cursor: pointer;
+}
+
+.itemContent{
+    width: 73.5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.itemContent>img{
+    width: 8vw;
+}
+.content{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.title{
+    color: white;
+    font-size: 3vw;
+}
+.contentP{
+    color: white;
+    font-size: 1.9vw;
+    text-wrap: wrap;
+}

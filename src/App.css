@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scrollbar-width: thin;
+}
+p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  user-select: none;
+}
+img {
+  pointer-events: none;
+  user-select: none;
+}
