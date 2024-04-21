@@ -43,8 +43,7 @@
 }
 .items:hover p{
    color: white;
-   transition: 0.2s;
-
+   transition: 0.5s;
 }
 .items:first-child{
     background: linear-gradient(#96cb8a,#042D01);
