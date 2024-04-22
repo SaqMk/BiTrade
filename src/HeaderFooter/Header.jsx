@@ -26,7 +26,7 @@ export default function Header() {
           <img className={styles.HeaderIcon} src={HeaderIcon}></img>
         </Link>
         <div className={styles.menu}>
-          <Link style={{ textDecoration: "none", color: "white" }} to="/">
+          <Link style={{ textDecoration: "none", color: "white" }} to="/freedemo">
             <p className={styles.freeDemo}>FREE DEMO</p>
           </Link>
           <Link style={{ textDecoration: "none", color: "white" }} to="/about">

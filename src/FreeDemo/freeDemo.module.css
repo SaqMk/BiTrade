@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+.wrapper {
+  background-image: url("../images/GraphicBackground.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

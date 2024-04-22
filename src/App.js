@@ -6,6 +6,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import ScrollTop from "./ScrollTop";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
+import FreeDemo from "./FreeDemo/FreeDemo";
 export default function App() { 
 
   return (
@@ -14,6 +15,7 @@ export default function App() {
    <ScrollTop/>
       <Routes>
         <Route path="/" element={<Homepage />}/>
+        <Route path="freedemo" element={<FreeDemo />}/>
         <Route path="about" element={<AboutUs />}/>
         <Route path="register" element={<Register />}/>
         <Route path="login" element={<Login />}/>
