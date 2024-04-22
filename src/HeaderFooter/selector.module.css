@@ -5,38 +5,42 @@
     font-size: 1.1vw;
     list-style: none;
     color: white;
-    margin-left: 0.4vw;
+    margin-left: 0.5vw;
 }
+
 .selectorContainer{
     display: flex;
     justify-content: space-between;
-    width: 5.5vw;
-    height: 7vw;
+    width: 5.2vw;
     position: absolute;
     border-radius: 1vw;
     background-color: rgba(32, 32, 32, 0.4);
-    padding: 0.3vw;
-    margin-top: 0.5vw;
+    padding: 0.4vw;
+    margin-top: 0.7vw;
 }
 .lanTitle{
   font-family: "Barlow Semi Condensed", sans-serif;
     font-size: 1.3vw;
+    margin-left: 0.5vw;
     color: white;
 }
 ul{
-    margin-top: 0.5vw;
-   padding: 0;
+    margin: 0;
+    padding: 0;
 }
 .containerChooseLan{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 0.5vw;
+    margin-top: 0.7vw;
+}
+.containerChooseLan:first-child{
+    margin-top: 0;
 }
 .generalContainer{
-    width: 5.5vw;
+    width: 5.7vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .imgIcon{
     width: 1.3vw;

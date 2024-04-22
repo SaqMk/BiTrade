@@ -26,11 +26,11 @@ const Selector = () => {
         name:'English'
     },
     {
-        icon: frIcon,
-        name:'Spanish'
+        icon: spIcon,
+        name:'Spain'
     },
     {
-        icon: spIcon,
+        icon: frIcon,
         name:'French'
     }
   ]

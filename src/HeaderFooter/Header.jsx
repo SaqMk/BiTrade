@@ -3,9 +3,24 @@ import styles from "./header.module.css";
 import HeaderIcon from "../images/HeaderIcon.svg";
 import { Link } from "react-router-dom";
 import Selector from "./Selector";
+import { useState, useEffect } from "react";
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className={styles.container}>
+    <div className={`${scrolled ? styles.scrolledContainer : styles.container}`}>
       <div className={styles.wrapper}>
         <Link to="/">
           <img className={styles.HeaderIcon} src={HeaderIcon}></img>
