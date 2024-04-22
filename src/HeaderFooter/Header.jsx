@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./header.module.css";
 import HeaderIcon from "../images/HeaderIcon.svg";
 import { Link } from "react-router-dom";
+import Selector from "./Selector";
 export default function Header() {
   return (
     <div className={styles.container}>
@@ -18,7 +19,9 @@ export default function Header() {
           </Link>
         </div>
         <div className={styles.regLog}>
-          <div className={styles.lan}></div>
+          <div className={styles.lan}>
+            <Selector/>
+          </div>
           <Link style={{ textDecoration: "none", color: "white" }} to="/register">
             <button className={styles.buttonReg}>Register</button>
           </Link>

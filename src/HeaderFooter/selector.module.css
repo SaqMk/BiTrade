@@ -1,0 +1,43 @@
+.selectorItem{
+  font-family: "Barlow Semi Condensed", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1vw;
+    list-style: none;
+    color: white;
+    margin-left: 0.4vw;
+}
+.selectorContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 5.5vw;
+    height: 7vw;
+    position: absolute;
+    border-radius: 1vw;
+    background-color: rgba(32, 32, 32, 0.4);
+    padding: 0.3vw;
+    margin-top: 0.5vw;
+}
+.lanTitle{
+  font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 1.3vw;
+    color: white;
+}
+ul{
+    margin-top: 0.5vw;
+   padding: 0;
+}
+.containerChooseLan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5vw;
+}
+.generalContainer{
+    width: 5.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+.imgIcon{
+    width: 1.3vw;
+}

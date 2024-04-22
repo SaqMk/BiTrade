@@ -44,11 +44,11 @@
 .regLog{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 22vw;
 }
 .lan{
     width: 5vw;
-    border: 1px solid;
 }
 
 .buttonReg{
