@@ -4,10 +4,38 @@
   align-items: center;
   width: 100%;
   height: 5vw;
-  background-color: #b9b6b6;
-  opacity: 0.15;
+  background-color: rgba(216, 216, 216, 0.1);
 }
 .wrapper {
+  display: flex;
+  justify-content: space-between;
   width: 95%;
-  border: 1px solid;
+}
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14.5vw;
+}
+.accContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8vw;
+}
+.HeaderIcon {
+  width: 9vw;
+  height: 3.8vh;
+}
+.bmenu{
+  cursor: pointer;
+  width: 2vw;
+}
+.accImg{
+  width: 2.6vw;
+}
+.moneyAcc{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.5vw;
+  color: white;
 }
