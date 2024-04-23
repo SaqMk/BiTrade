@@ -5,14 +5,14 @@ import bmenu from "../../images/bmenu.svg";
 import accImg from "../../images/accImg.svg";
 import { Link } from "react-router-dom";
 
-export default function HeaderTrauiding() {
+export default function HeaderTraiding({togglePanel}) {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.iconContainer}>
-            <img className={styles.bmenu} src={bmenu} />
+            <img onClick={togglePanel} src={bmenu} className={styles.burMenu} />
           <Link to="/">
-            <img className={styles.HeaderIcon} src={HeaderIcon} />
+            <img className={styles.headerIcon} src={HeaderIcon} />
           </Link>
         </div>
         <div className={styles.accContainer}>

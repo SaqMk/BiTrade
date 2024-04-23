@@ -1,47 +1,50 @@
-.selectorItem{
+.selectorItem {
   font-family: "Barlow Semi Condensed", sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.1vw;
-    list-style: none;
-    color: white;
-    margin-left: 0.5vw;
+  text-decoration: none;
+  font-size: 1.1vw;
+  list-style: none;
+  color: white;
+  margin-left: 0.5vw;
 }
 
-.selectorContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 5.2vw;
-    position: absolute;
-    border-radius: 1vw;
-    background-color: rgba(32, 32, 32, 0.4);
-    padding: 0.4vw;
-    margin-top: 0.7vw;
+.selectorContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 5.2vw;
+  position: absolute;
+  border-radius: 1vw;
+  background-color: rgba(32, 32, 32, 0.4);
+  padding: 0.4vw;
+  margin-top: 0.7vw;
+  transition: max-height 0.3s ease;
 }
-.lanTitle{
+.lanTitle {
   font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 1.3vw;
-    margin-left: 0.5vw;
-    color: white;
+  font-size: 1.3vw;
+  margin-left: 0.5vw;
+  color: white;
 }
-ul{
-    margin: 0;
-    padding: 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
-.containerChooseLan{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 0.7vw;
+.containerChooseLan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.7vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
 }
-.containerChooseLan:first-child{
-    margin-top: 0;
+.containerChooseLan:first-child {
+  margin-top: 0;
 }
-.generalContainer{
-    width: 5.7vw;
-    display: flex;
-    justify-content: flex-start;
+.generalContainer {
+  width: 5.7vw;
+  display: flex;
+  justify-content: flex-start;
 }
-.imgIcon{
-    width: 1.3vw;
+.imgIcon {
+  width: 1.3vw;
 }
