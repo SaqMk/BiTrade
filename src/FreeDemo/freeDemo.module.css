@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  height: 100vh;
   background-color: black;
 }
 .wrapper {
@@ -16,5 +15,4 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 89vh;
 }

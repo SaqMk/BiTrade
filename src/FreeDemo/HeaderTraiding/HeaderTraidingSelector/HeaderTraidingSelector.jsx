@@ -8,7 +8,7 @@ import accountCircleDemo from "../../../images/accountCircleDemo.svg";
 import chatDemo from "../../../images/chatDemo.svg";
 import logout from "../../../images/logout.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 function HorizontalPanel({ panelVisible }) {
 
   const [state, setState] = useState([
@@ -47,14 +47,27 @@ function HorizontalPanel({ panelVisible }) {
       img: chatDemo,
     },
   ])
-  // const [activeIndex, setActiveIndex] = useState(0);
 
   function handleClick(ind){
     console.log(ind)
   };
+  const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleResize() {
+      setBrowserHeight(window.innerHeight);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+  console.log(browserHeight)
   return (
-    <div className={styles.horizontalPanel}>
-      <div className={` ${styles.panel} ${panelVisible ? styles.visible : ""}`}>
+    <div  className={styles.horizontalPanel}>
+      <div style={{ height: `calc(${browserHeight}px - 5vw)` }} className={` ${styles.panel} ${panelVisible ? styles.visible : ""}`}>
         <div className={styles.wrapper}>
           {state.map((item,ind) => (
             <div key={ind} onClick={handleClick(ind)} className={styles.contentContainer}>
