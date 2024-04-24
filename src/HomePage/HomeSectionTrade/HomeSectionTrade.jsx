@@ -46,6 +46,7 @@ export default function HomeSectionTrade() {
           className={`${activeIndex === index ? styles.active : styles.item}`}
           onMouseOver={() => handleClick(index)}
         >
+           {/* className={index === 1 || index === 3 ? styles.highlight : styles.itemContent} */}
           <div className={styles.itemContent}>
             <img src={item.img} />
             <div className={styles.content}>

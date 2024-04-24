@@ -27,11 +27,11 @@ const Selector = () => {
     },
     {
       icon: spIcon,
-      name: "Spain",
+      name: "Русский",
     },
     {
       icon: frIcon,
-      name: "French",
+      name: "Հայերեն",
     },
   ];
   return (

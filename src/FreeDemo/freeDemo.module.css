@@ -5,7 +5,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-image: url("../images/GraphicBackground.svg");
+  background-image: url("../images/homeHero6.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

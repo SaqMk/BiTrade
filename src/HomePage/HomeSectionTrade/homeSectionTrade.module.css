@@ -12,9 +12,22 @@
   align-items: center;
   width: 49.6%;
   height: 57vh;
-  background: linear-gradient(0.25turn, #2b3d31, #405545);
+  background: linear-gradient(-0.25turn, #546656, #222322);
   cursor: pointer;
   transition: 0.4s;
+}
+.highlight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49.6%;
+  height: 57vh;
+  background: linear-gradient(0.25turn, #546656, #222322);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.item{
+  background-color: red;
 }
 .active {
   display: flex;
@@ -22,7 +35,7 @@
   align-items: center;
   width: 49.6%;
   height: 57vh;
-  background: linear-gradient(0.25turn, #2b3d31, #405545);
+  background: linear-gradient(-0.25turn, #546656, #222322);
   cursor: pointer;
   box-shadow: 10px 5px 5px rgb(129, 129, 129);
   transition: 0.4s;
