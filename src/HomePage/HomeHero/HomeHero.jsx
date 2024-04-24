@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../HomeHero/HomeHero.module.css";
+import { Link } from "react-router-dom";
 export default function () {
   return (
     <div className={styles.container}>
@@ -13,7 +14,10 @@ export default function () {
             interface Gain access to a vast array of over 100 global trading
             assets{" "}
           </p>
+          <Link to="login">
+
           <button className={styles.button}>Start Trading</button>
+          </Link>
         </div>
       </div>
     </div>

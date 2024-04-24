@@ -5,7 +5,7 @@
   height: 127vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../images/HomeHero.svg");
+  background-image: url("../../images/HomeHero.jpg");
 }
 .wrapper {
   width: 87%;
@@ -39,5 +39,6 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 0.8vw;
-  background: linear-gradient(0.25turn,#5B8651,#042D01);
+  background: #546656;
+
 }

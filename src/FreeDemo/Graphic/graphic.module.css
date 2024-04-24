@@ -4,13 +4,13 @@
   flex-direction: column;
   margin-left: -7vw;
   width: 88%;
+  height: 89vh;
   color: white;
 }
 .graphicWrapper {
   background-image: url("../../images/gr.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: calc(100% - 5vh);
 }
 .graphicTime {
   height: 5vh;

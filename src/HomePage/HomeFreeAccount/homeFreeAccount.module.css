@@ -30,5 +30,6 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 0.8vw;
-  background: linear-gradient(0.25turn,#5B8651,#042D01);
+  background: linear-gradient( #546656, #222322);
+
 }

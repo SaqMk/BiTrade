@@ -15,14 +15,19 @@ export default function FreeDemo() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>
+       <div className={styles.wrapper}>
+        
         <HeaderTraiding togglePanel={togglePanel} />
+        
         <div className={styles.ContentContainer}>
+          
           <HeaderTraidingSelector panelVisible={panelVisible} />
+          
           <GraphicContainer />
           <ControlGraphic />
+         
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
