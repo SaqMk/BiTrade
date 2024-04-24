@@ -27,14 +27,14 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  width: 3.4vw;
-  height: 4vh;
-  padding: 1vw;
+  width: 4.5vw;
+  height: 7.5vh;
+  padding: 0.4vw;
   border-radius: 1vw;
   transition: 0.2s;
-}
-.contentContainer:hover {
-  background-color: #707070;
+  font-size: 1vw;
+  color: white;
+  cursor: pointer;
 }
 .contentContainer:last-child {
   margin-bottom: 2vw;
@@ -44,9 +44,13 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  margin-top: 2vw;
+  margin-top: 1vw;
+  height: auto;
 }
 .itemImg {
   width: 2vw;
   margin: 0;
+}
+.active {
+  background-color: #B9B6B6;
 }

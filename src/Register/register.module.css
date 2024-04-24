@@ -1,20 +1,62 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 106vh;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 106vh;
 }
-.wrapper{
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  height: 82.8vh;
+}
+.formDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 37.5vw;
+  height: 100%;
+  border: 1px solid;
+}
+.rafiki {
+  width: 48vw;
+}
+.title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-image: linear-gradient(to right, #648c5a, #022601);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3.2vw;
+}
+.createAcc {
+  font-size: 1.4vw;
+}
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 32vh;
+  border: 1px solid;
+}
+.formInput {
+  width: 22.7vw;
+  height: 6.3vh;
+  border-radius: 0.5vw;
+  background-color: #f2f2f2;
+  border: none;
+  padding-left: 1vw;
+}
+.label {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.1vw;
+}
+.formWrapper{
     display: flex;
     justify-content: space-between;
-    width: 86%;
-    height: 82.8vh;
-}
-.formDiv{
-    width: 37.5vw;
-    height: 100%;
-}
-.rafiki{
-    width: 48vw;
+    flex-direction: column;
+    height: 8.5vh;
+    border: 1px solid;
 }
