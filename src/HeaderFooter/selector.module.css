@@ -13,10 +13,9 @@
   width: 5.2vw;
   position: absolute;
   border-radius: 1vw;
-  background-color: rgba(32, 32, 32, 0.4);
+  background-color: rgba(32, 32, 32, 0.2);
   padding: 0.4vw;
   margin-top: 0.7vw;
-  transition: max-height 0.3s ease;
 }
 .lanTitle {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -34,17 +33,27 @@ ul {
   align-items: center;
   margin-top: 0.7vw;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  
 }
 .containerChooseLan:first-child {
   margin-top: 0;
 }
 .generalContainer {
-  width: 5.7vw;
+  width: 7vw;
   display: flex;
   justify-content: flex-start;
+  align-items:end;
+
 }
 .imgIcon {
-  width: 1.3vw;
+  width: 1.5vw;
+}
+.iconContainer{
+  color: white;
+  width: 1.5vw;
+  height: auto;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+.iconClose {
+  transform: rotate(90deg);
 }

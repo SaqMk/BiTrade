@@ -3,6 +3,7 @@ import styles from "../HeaderFooter/selector.module.css";
 import enLanIcon from "../images/lanIcon.svg";
 import frIcon from "../images/frIcon.png";
 import spIcon from "../images/spIcon.webp";
+import { HiChevronRight } from "react-icons/hi";
 
 const Selector = () => {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
@@ -34,7 +35,7 @@ const Selector = () => {
     },
   ];
   return (
-    <div>
+    <>
       <div
         className={styles.generalContainer}
         onClick={toggleSelector}
@@ -42,6 +43,8 @@ const Selector = () => {
       >
         <img className={styles.imgIcon} src={lanIc} />
         <p className={styles.lanTitle}>{lan}</p>
+        <HiChevronRight className={` ${styles.iconContainer} ${isSelectorOpen ? styles.iconContainer : styles.iconClose}`}/>
+
       </div>
       {isSelectorOpen && (
         <div className={styles.selectorContainer}>
@@ -58,7 +61,7 @@ const Selector = () => {
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
