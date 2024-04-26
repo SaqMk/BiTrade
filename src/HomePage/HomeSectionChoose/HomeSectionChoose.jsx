@@ -12,28 +12,28 @@ export default function HomeSectionChoose() {
   const [state, setState] = useState([
     {
       id: 1,
-      img: Graphic,
+      // img: Graphic,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
     },
     {
       id: 2,
-      img: Edu,
+      // img: Edu,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
     },
     {
       id: 3,
-      img: Bit,
+      // img: Bit,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
     },
     {
       id: 4,
-      img: Demo,
+      // img: Demo,
 
       Title: "Flexible Trading",
       content:
@@ -41,21 +41,21 @@ export default function HomeSectionChoose() {
     },
     {
       id: 5,
-      img: Wallet,
+      // img: Wallet,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
     },
     {
       id: 6,
-      img: Loyality,
+      // img: Loyality,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
     },
     {
       id: 7,
-      img: Advantages,
+      // img: Advantages,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
@@ -63,7 +63,7 @@ export default function HomeSectionChoose() {
 
     {
       id: 8,
-      img: Indicator,
+      // img: Indicator,
       Title: "Flexible Trading",
       content:
         "Latest trends: quick and digital trading, express trades, Forex MT5, pending orders, trades copying. Payouts up to 218%.",
@@ -74,11 +74,14 @@ export default function HomeSectionChoose() {
   const handleClick = (index) => {
     setActiveIndex(index);
   };
+  const outChange = () => {
+    setActiveIndex(0);
+  };
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
+    <div className={styles.container} onMouseLeave={outChange}>
+      <div className={styles.wrapper} >
         <p className={styles.generalTitle}>Why Choose us?</p>
-        <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper} >
           {state.map((item, index) => (
             <div
               className={`${
@@ -87,13 +90,8 @@ export default function HomeSectionChoose() {
               onMouseOver={() => handleClick(index)}
               key={index}
             >
-              <img className={styles.itemsVector} src={item.img} />
-              <p  className={`${
-                activeIndex === index ? styles.title : styles.title
-              }`}>{item.Title}</p>
-              <p  className={`${
-                activeIndex === index ? styles.content : styles.content
-              }`}>{item.content}</p>
+              <p className={styles.title}>{item.Title}</p>
+              <p className={styles.content}>{item.content}</p>
             </div>
           ))}
         </div>

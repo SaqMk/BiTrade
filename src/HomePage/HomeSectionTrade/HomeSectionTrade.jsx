@@ -43,10 +43,9 @@ export default function HomeSectionTrade() {
       {count.map((item,index) => (
         <div
           key={item.id}
-          className={`${activeIndex === index ? styles.active : styles.item}`}
+          className={`${item.id == 2 || item.id == 4 ? styles.change : styles.item}`}
           onMouseOver={() => handleClick(index)}
         >
-           {/* className={index === 1 || index === 3 ? styles.highlight : styles.itemContent} */}
           <div className={styles.itemContent}>
             <img src={item.img} />
             <div className={styles.content}>

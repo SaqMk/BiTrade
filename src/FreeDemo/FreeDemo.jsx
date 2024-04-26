@@ -6,35 +6,56 @@ import { useState } from "react";
 import GraphicContainer from "./Graphic/GraphicContainer";
 import ControlGraphic from "./ControlGraphic/ControlGraphic";
 import { useEffect } from "react";
+import HeaderTraidingSelectorV2 from "./HeaderTraiding/HeaderTraidingSelector/HeaderTraidingSelectorV2/HeaderTraidingSelectorV2";
+
 export default function FreeDemo() {
   const [panelVisible, setPanelVisible] = useState(false);
-
-  const togglePanel = () => {
-    setPanelVisible(!panelVisible);
-    console.log(panelVisible);
-  };
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
+  const [horizontalPanel, setHorizontalPanel] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     function handleResize() {
       setBrowserHeight(window.innerHeight);
     }
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  const togglePanel = () => {
+    setHorizontalPanel(false);
+    setPanelVisible(!panelVisible);
+    setActiveIndex(0);
+  };
 
-  console.log(browserHeight)
+  const togglePanelV2 = (ind) => {
+    setHorizontalPanel(true);
+    setActiveIndex(ind);
+    ind == 0 || ind == 5 ? setHorizontalPanel(false) : setHorizontalPanel(true);
+  };
+  const [dataFromChild, setDataFromChild] = useState(null);
+
+  const handleDataSecond = (dataSecond) => {
+    setDataFromChild(dataSecond);
+  };
   return (
-    <div style={{height:browserHeight}} className={styles.container}>
+    <div style={{ height: browserHeight }} className={styles.container}>
       <div className={styles.wrapper}>
-        <HeaderTraiding togglePanel={togglePanel} />
+        <HeaderTraiding panelVisible={panelVisible} togglePanel={togglePanel} />
         <div className={styles.ContentContainer}>
-          <HeaderTraidingSelector panelVisible={panelVisible} />
-          <GraphicContainer />
-          <ControlGraphic />
+          <HeaderTraidingSelector
+            panelVisible={panelVisible}
+            togglePanelV2={togglePanelV2}
+            activeIndex={activeIndex}
+          />
+          <GraphicContainer sendDataSecond={handleDataSecond} />
+          <HeaderTraidingSelectorV2
+            horizontalPanel={horizontalPanel}
+            activeIndex={activeIndex}
+          />
+          <ControlGraphic dataFromChild={dataFromChild} />
         </div>
       </div>
     </div>

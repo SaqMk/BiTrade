@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "../HeaderFooter/selector.module.css";
 import enLanIcon from "../images/lanIcon.svg";
-import frIcon from "../images/frIcon.png";
+import armicon from "../images/armicon.png";
 import spIcon from "../images/spIcon.webp";
 import { HiChevronRight } from "react-icons/hi";
 
 const Selector = () => {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
-  const [lan, setLan] = useState("English");
   const [lanIc, setLanIc] = useState(enLanIcon);
 
   const toggleSelector = () => {
@@ -24,16 +23,21 @@ const Selector = () => {
     {
       icon: enLanIcon,
       name: "English",
+      shortName: "EN"
     },
     {
       icon: spIcon,
       name: "Русский",
+      shortName: "RU"
     },
     {
-      icon: frIcon,
+      icon: armicon,
       name: "Հայերեն",
+      shortName: "ARM"
     },
   ];
+  const [lan, setLan] = useState(lanContent[0].name);
+
   return (
     <>
       <div
@@ -55,7 +59,7 @@ const Selector = () => {
                 className={styles.containerChooseLan}
               >
                 <img className={styles.imgIcon} src={e.icon} />
-                <li className={styles.selectorItem}>{e.name}</li>
+                <li className={styles.selectorItem}>{e.shortName}</li>
               </div>
             ))}
           </ul>

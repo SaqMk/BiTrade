@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   height: 115vh;
+  background:#c7c9c7;
 }
 .item {
   display: flex;
@@ -13,16 +14,6 @@
   width: 49.6%;
   height: 57vh;
   background: linear-gradient(-0.25turn, #546656, #222322);
-  cursor: pointer;
-  transition: 0.4s;
-}
-.highlight{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 49.6%;
-  height: 57vh;
-  background: linear-gradient(0.25turn, #546656, #222322);
   cursor: pointer;
   transition: 0.4s;
 }
@@ -37,8 +28,24 @@
   height: 57vh;
   background: linear-gradient(-0.25turn, #546656, #222322);
   cursor: pointer;
-  box-shadow: 10px 5px 5px rgb(129, 129, 129);
   transition: 0.4s;
+}
+.change{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49.6%;
+  height: 57vh;
+  background: linear-gradient(0.25turn, #546656, #222322);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.item:hover {
+  box-shadow: 10px 5px 5px rgb(129, 129, 129);
+}
+
+.change:hover {
+  box-shadow: 10px 5px 5px rgb(129, 129, 129);
 }
 .box.active {
   background-color: blue;

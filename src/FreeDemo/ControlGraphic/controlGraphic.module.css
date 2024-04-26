@@ -1,4 +1,54 @@
 .container {
+  display: flex;
+  justify-content: center;
   width: 12%;
   border-left: 0.1px solid #a1a09f;
+}
+.controlContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+  height: 55vh;
+  margin-top: 1vw;
+}
+.inpControl {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 22.7vh;
+}
+.traidButton {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+}
+.inpTime {
+  height: 9.5vh;
+  width: 100%;
+}
+.controlBuy {
+  width: 8vw;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3D6F30; 
+  cursor: pointer;
+  color: white;
+}
+
+.controlSale {
+  width: 8vw;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #BA0018; 
+  cursor: pointer;
+  color: white;
 }

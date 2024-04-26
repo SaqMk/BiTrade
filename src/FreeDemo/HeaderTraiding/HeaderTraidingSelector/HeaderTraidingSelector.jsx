@@ -20,8 +20,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function HorizontalPanel({ panelVisible }) {
-  const [state, setState] = useState([
+function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
+  const state = [
     {
       id: 1,
       img1: traiding,
@@ -65,13 +65,8 @@ function HorizontalPanel({ panelVisible }) {
       img1: chatDemo1,
       title: "Chat",
     },
-  ]);
+  ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleClick = (ind) => {
-    setActiveIndex(ind);
-  };
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
   useEffect(() => {
     function handleResize() {
@@ -82,7 +77,6 @@ function HorizontalPanel({ panelVisible }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <div className={styles.horizontalPanel}>
       <div
@@ -93,7 +87,7 @@ function HorizontalPanel({ panelVisible }) {
           {state.map((item, ind) => (
             <div
               key={ind}
-              onClick={() => handleClick(ind)}
+              onClick={() => togglePanelV2(ind)}
               className={`${styles.contentContainer} ${
                 activeIndex === ind ? styles.active : ""
               }`}
@@ -101,6 +95,7 @@ function HorizontalPanel({ panelVisible }) {
               <img
                 className={styles.itemImg}
                 src={`${activeIndex === ind ? item.img1 : item.img}`}
+                alt=""
               />
               <p
                 className={`${styles.contentContainer} ${
