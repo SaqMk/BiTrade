@@ -19,7 +19,7 @@
   height: 5.4vh;
   border: 1px solid #d9d9d9;
   border-radius: 0.3vw;
-  padding: 0.2vw 0.4vw ;
+  padding: 0.2vw 0.4vw;
 }
 .targetPass {
   display: flex;
@@ -28,20 +28,24 @@
   height: 5.4vh;
   border: 1px solid #ffffff;
   border-radius: 0.3vw;
-  padding: 0.2vw 0.4vw ;
+  padding: 0.2vw 0.4vw;
 }
 .graphicWrapper {
   height: 100%;
 }
 .targetOpenSelector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   width: 20vw;
-  height: 46vh;
-  border: 1px solid #D9D9D9;
-  transition: 0.1s;
+  height: 45vh;
+  border: 1px solid #d9d9d9;
   border-radius: 0.5vw;
-  background-color: #383F3F;
+  background-color: #383f3f;
+  padding-bottom: 1vw;
 }
-.selectWrapper{
+.selectWrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -49,4 +53,53 @@
   height: 55vh;
   margin-top: 5vh;
   margin-left: 10vw;
+}
+.targetSelectorOpenWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18vw;
+  height: 8.6vh;
+}
+.targetSelectorOpenWrapper input {
+  width: 15vw;
+  height: 3.6vh;
+  border-radius: 0.3vw;
+  padding-left: 0.3vw;
+  border: 1px solid #b9b6b6;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+::placeholder {
+  font-size: 1.1vw;
+}
+.targetSelectorOpenWrapper button {
+  width: 2vw;
+  height: 4vh;
+  border-radius: 0.3vw;
+  background-color: #8c9090;
+  border: 0.1px solid #b9b6b6;
+}
+.scrollItem {
+  width: 86%;
+  height: 4.3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4vw;
+  background-color: #8c9090;
+  border-radius: 0.5vw;
+  border: 1px solid;
+}
+.scrollItemPass {
+  width: 86%;
+  height: 4.3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4vw;
+  background-color: #00e7e7;
+  border-radius: 0.5vw;
+  border: 1px solid;
 }

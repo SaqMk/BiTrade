@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #b9b6b6;
+  width: 10vw;
+  height: 7vh;
+  border-radius: 0.3vw;
+  margin-top: 0.2vw;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5vw;
+  margin-left: 1vw;
+}
+.controlTime {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 1vw;
+  height: 50%;
+  margin-right: 1vw;
+}
+.controlTime {
+  width: 0.8vw;
+}
+.timeP {
+  color: white;
+  font-size: 1.5vw;
+}
+.timeIcon {
+  width: 1.3vw;
+}

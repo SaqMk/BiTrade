@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeaderTraiding from "./HeaderTraiding/HeaderTraiding";
 import HeaderTraidingSelector from "../FreeDemo/HeaderTraiding/HeaderTraidingSelector/HeaderTraidingSelector";
 import styles from "../FreeDemo/freeDemo.module.css";
-import { useState } from "react";
 import GraphicContainer from "./Graphic/GraphicContainer";
 import ControlGraphic from "./ControlGraphic/ControlGraphic";
-import { useEffect } from "react";
 import HeaderTraidingSelectorV2 from "./HeaderTraiding/HeaderTraidingSelector/HeaderTraidingSelectorV2/HeaderTraidingSelectorV2";
 
 export default function FreeDemo() {
@@ -13,6 +11,7 @@ export default function FreeDemo() {
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
   const [horizontalPanel, setHorizontalPanel] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [parentProc, setParentProc] = useState(null);
 
   useEffect(() => {
     function handleResize() {
@@ -35,11 +34,11 @@ export default function FreeDemo() {
     setActiveIndex(ind);
     ind == 0 || ind == 5 ? setHorizontalPanel(false) : setHorizontalPanel(true);
   };
-  const [dataFromChild, setDataFromChild] = useState(null);
 
-  const handleDataSecond = (dataSecond) => {
-    setDataFromChild(dataSecond);
+  const handleProcChange = (proc) => {
+    setParentProc(proc);
   };
+
   return (
     <div style={{ height: browserHeight }} className={styles.container}>
       <div className={styles.wrapper}>
@@ -50,12 +49,12 @@ export default function FreeDemo() {
             togglePanelV2={togglePanelV2}
             activeIndex={activeIndex}
           />
-          <GraphicContainer sendDataSecond={handleDataSecond} />
           <HeaderTraidingSelectorV2
             horizontalPanel={horizontalPanel}
             activeIndex={activeIndex}
           />
-          <ControlGraphic dataFromChild={dataFromChild} />
+          <GraphicContainer sendProcToParent={handleProcChange} />
+          <ControlGraphic parentProc={parentProc} />
         </div>
       </div>
     </div>

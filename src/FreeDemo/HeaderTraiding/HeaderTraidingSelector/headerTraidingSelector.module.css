@@ -11,12 +11,11 @@
 
   border-right: 0.1px solid #a1a09f;
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
   width: 7vw;
 }
 .visible {
   transform: translateX(0);
-  animation-delay: 1s;
   transition: transform 0.5s ease;
 }
 
@@ -55,15 +54,15 @@
   margin: 0;
 }
 .active {
-  background-color: #5A625D;
+  background-color: #5a625d;
   border: 0.1px solid white;
 }
-.activePharagraph{
- color: white;
+.activePharagraph {
+  color: white;
 }
-.passPharagraph{
+.passPharagraph {
   color: #b9b6b6;
 }
-.itemImg:last-child{
+.itemImg:last-child {
   width: 1.5vw;
 }

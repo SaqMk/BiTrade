@@ -3,7 +3,13 @@ import styles from "../TargetSelector/targetSelector.module.css";
 import flag from "../../../images/flag.svg";
 import { HiChevronRight } from "react-icons/hi";
 import { useEffect } from "react";
-export default function TargetSelector({ isSelectorOpen, sendData }) {
+export default function TargetSelector({
+  isSelectorOpen,
+  sendData,
+  flagImg,
+  targetTitle,
+  proc,
+}) {
   const TargetSelectorItem = [
     {
       img: flag,
@@ -12,26 +18,39 @@ export default function TargetSelector({ isSelectorOpen, sendData }) {
     },
     {
       img: flag,
-      title: "EUR/USD",
+      title: "AMD/USD",
       procent: "23",
     },
     {
       img: flag,
-      title: "EUR/USD",
+      title: "RUB/USD",
       procent: "52",
+    },
+    {
+      img: flag,
+      title: "NO",
+      procent: "NO",
+    },
+    {
+      img: flag,
+      title: "NO",
+      procent: "NO",
+    },
+    {
+      img: flag,
+      title: "NO",
+      procent: "NO",
     },
   ];
   useEffect(() => {
     const data = TargetSelectorItem;
-    sendData(data); 
+    sendData(data);
   }, []);
-  const [flagImg, setFlagImg] = useState(TargetSelectorItem[0].img);
-  const [targetTitle, setTargetTitle] = useState(TargetSelectorItem[0].title);
-  const [proc, setProc] = useState(TargetSelectorItem[0].procent);
 
+  console.log(proc);
   return (
     <>
-      <img className={styles.targetImg} src={flag} alt="" />
+      <img className={styles.targetImg} src={flagImg} alt="" />
       <div className={styles.targetContainer}>
         <div className={styles.targetChooseContainer}>
           <p className={styles.targetTitle}>{targetTitle}</p>

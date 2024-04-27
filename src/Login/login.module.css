@@ -106,8 +106,8 @@ input:focus {
   font-size: 1.1vw;
   margin-top: 1vw;
 }
-.rafContainer{
-    background-image: url("../images/rafiki.svg");
+.rafContainer {
+  background-image: url("../images/rafiki.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;

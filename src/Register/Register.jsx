@@ -86,8 +86,7 @@ export default function Register() {
               </div>
             </div>
           </div>
-          <div className={styles.rafContainer}>
-          </div>
+          <div className={styles.rafContainer}></div>
         </div>
       </div>
       <Footer />

@@ -3,32 +3,61 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    #333D38,
-    #5D6F67
-  );
+  background: linear-gradient(to bottom, #333d38, #5d6f67);
 
   border-right: 0.1px solid #a1a09f;
+  transform: scaleX(7vw);
   position: absolute;
   left: 7vw;
   width: 24vw;
   transform-origin: left; /* Устанавливаем точку трансформации слева */
   transition: transform 0.5s ease;
+  z-index: 3;
 }
-
 .pass {
-  transform: scaleX(0); /* Устанавливаем начальный масштаб по оси X на 0 */
-  transform-origin: left; /* Устанавливаем точку трансформации слева */
+  transform: scaleX(0);
+  left: 0;
+  transform-origin: left;
   transition: transform 0.5s ease;
 }
 .historyContainer {
-  width: 5vw;
-  height: 5vw;
-  background-color: red;
+  width: 21.5vw;
+  height: 50vh;
+  margin-top: 2vw;
 }
 .topTrContainer {
   width: 5vw;
   height: 5vw;
   background-color: rgb(0, 221, 255);
+}
+.historyTitle {
+  font-size: 1.5vw;
+  color: white;
+}
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  margin: 1.7vw auto;
+}
+.buttonsContainer button {
+  width: 10.7vw;
+  height: 4.8vh;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1vw;
+}
+.buttonsContainer button:first-child {
+  border-radius: 0.4vw 0 0 0.4vw;
+}
+.buttonsContainer button:last-child {
+  border-radius: 0 0.4vw 0.4vw 0;
+}
+.clicked {
+  background-color: #8a8a8a;
+  color: white;
+}
+.closed {
+  background-color: #5f5f5f;
+  color: #b9b6b6;
 }

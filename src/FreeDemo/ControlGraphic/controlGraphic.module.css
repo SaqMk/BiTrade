@@ -26,29 +26,43 @@
   align-items: center;
   width: 100%;
   height: 30vh;
+  margin-top: 2vw;
 }
 .inpTime {
   height: 9.5vh;
   width: 100%;
 }
 .controlBuy {
+  background-image: url("../../images/traingleBuy.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 8vw;
   height: 13vh;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  background-color: #3D6F30; 
+  flex-direction: column;
   cursor: pointer;
   color: white;
 }
 
 .controlSale {
+  background-image: url("../../images/traingleSale.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 8vw;
   height: 13vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #BA0018; 
+  flex-direction: column;
   cursor: pointer;
   color: white;
+}
+.procentBuy {
+  font-size: 1vw;
+  color: #9eb797;
+}
+.CountProcentBuy {
+  font-size: 1.3vw;
 }
