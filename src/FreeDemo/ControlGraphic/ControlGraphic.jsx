@@ -37,14 +37,14 @@ export default function ControlGraphic({ parentProc }) {
             </p>
           </div>
           <div className={styles.controlSale}>
-            <p className={styles.CountProcentBuy}>
+            <p className={styles.CountProcentSale}>
               ${" "}
               {(
                 parseInt(count) +
                 (parseInt(parentProc) * parseInt(count)) / 100
               ).toFixed(2)}
             </p>
-            <p className={styles.procentBuy}>
+            <p className={styles.procentSale}>
               {parentProc !== null ? parentProc : "N/A"}%
             </p>
           </div>

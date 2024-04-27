@@ -1,10 +1,12 @@
 import styles from "../HeaderTraidingSelectorV2/headerTraidingSelectorV2.module.css";
 import React, { useEffect, useState } from "react";
 
-function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex ,panelVisible }) {
+function HeaderTraidingSelectorV2({
+  horizontalPanel,
+  activeIndex,
+}) {
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
-  const [openButtonClicked, setOpenButtonClicked] = useState(false);
-  const [closedButtonClicked, setClosedButtonClicked] = useState(false);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
 
   useEffect(() => {
     function handleResize() {
@@ -16,17 +18,18 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex ,panelVisible }
     };
   }, []);
 
-  const handleOpenButtonClick = () => {
-    setOpenButtonClicked(true);
-    setClosedButtonClicked(false);
+  const handleButtonClick = (index) => {
+    setActiveButtonIndex(index);
   };
 
-  const handleClosedButtonClick = () => {
-    setClosedButtonClicked(true);
-    setOpenButtonClicked(false);
-  };
-
-
+  const buttons = [
+    {
+      placeHolder: "Open",
+    },
+    {
+      placeHolder: "Closed",
+    },
+  ];
 
   return (
     <div
@@ -43,19 +46,28 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex ,panelVisible }
             history
           </p>
           <div className={styles.buttonsContainer}>
-            <button
-              onClick={handleOpenButtonClick}
-              className={openButtonClicked ? styles.clicked : styles.closed}
-            >
-              Open
-            </button>
-            <button
-              onClick={handleClosedButtonClick}
-              className={closedButtonClicked ? styles.clicked : styles.closed}
-            >
-              Closed
-            </button>
+            {buttons.map((button, index) => (
+              <button
+                key={index}
+                onClick={() => handleButtonClick(index)}
+                className={
+                  activeButtonIndex === index ? styles.activeButton : styles.passiveButton
+                }
+              >
+                {button.placeHolder}
+              </button>
+            ))}
           </div>
+          {activeButtonIndex === 0 && 
+          <div style={{color:'white'}}>
+            Content for Open
+          </div>
+          }
+          {activeButtonIndex === 1 && 
+          <div style={{color:'white'}}>
+            Content for Closed
+          </div>
+          }
         </div>
       )}
       {activeIndex === 2 && <div className={styles.topTrContainer}></div>}

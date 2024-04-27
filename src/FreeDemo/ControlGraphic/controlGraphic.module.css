@@ -33,13 +33,14 @@
   width: 100%;
 }
 .controlBuy {
+  position: relative;
   background-image: url("../../images/traingleBuy.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 8vw;
   height: 13vh;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
@@ -47,6 +48,7 @@
 }
 
 .controlSale {
+  position: relative;
   background-image: url("../../images/traingleSale.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -60,9 +62,26 @@
   color: white;
 }
 .procentBuy {
+  top: 1.5vw;
+  position: absolute;
   font-size: 1vw;
   color: #9eb797;
 }
 .CountProcentBuy {
+  top: 3vw;
+  position: absolute;
+  font-size: 1.3vw;
+}
+.procentSale {
+  top: 3vw;
+  position: absolute;
+
+  font-size: 1vw;
+  color: #9eb797;
+}
+.CountProcentSale {
+  top: 1vw;
+  position: absolute;
+
   font-size: 1.3vw;
 }

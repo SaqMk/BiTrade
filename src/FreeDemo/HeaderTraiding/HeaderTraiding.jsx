@@ -11,13 +11,15 @@ import { useState } from "react";
 export default function HeaderTraiding({ togglePanel, panelVisible }) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
   const [lan, setLan] = useState("Demo");
+  const [balanc, setBalanc] = useState("10000");
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleSelector = () => {
     setIsSelectorOpen(!isSelectorOpen);
   };
-  const handleLanguageSelect = (lang, ind) => {
+  const handleLanguageSelect = (lang, bal, ind) => {
     setLan(lang);
+    setBalanc(bal);
     setIsSelectorOpen(!isSelectorOpen);
     setActiveIndex(ind);
   };
@@ -50,7 +52,7 @@ export default function HeaderTraiding({ togglePanel, panelVisible }) {
         <div className={styles.accContainer}>
           <img className={styles.accImg} alt="" src={profileCircle} />
           <div className={styles.QTDemoContainer}>
-            <p className={styles.moneyAcc}>$10000</p>
+            <p className={styles.moneyAcc}>${balanc}</p>
             <div
               onClick={toggleSelector}
               style={{
@@ -76,7 +78,9 @@ export default function HeaderTraiding({ togglePanel, panelVisible }) {
                   {lanContent.map((e, ind) => (
                     <div
                       key={e.id}
-                      onClick={() => handleLanguageSelect(` ${e.name}`, ind)}
+                      onClick={() =>
+                        handleLanguageSelect(`${e.name}`, `${e.balance}`, ind)
+                      }
                       className={`${
                         activeIndex === ind
                           ? styles.activeContainer

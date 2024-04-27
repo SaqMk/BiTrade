@@ -21,7 +21,6 @@ function HorizontalPanel({
   panelVisible,
   togglePanelV2,
   activeIndex,
-  horizontalPanel,
 }) {
   const state = [
     {
