@@ -1,7 +1,7 @@
 import styles from "../HeaderTraidingSelectorV2/headerTraidingSelectorV2.module.css";
 import React, { useEffect, useState } from "react";
 
-function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
+function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex ,panelVisible }) {
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
   const [openButtonClicked, setOpenButtonClicked] = useState(false);
   const [closedButtonClicked, setClosedButtonClicked] = useState(false);
@@ -25,6 +25,8 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
     setClosedButtonClicked(true);
     setOpenButtonClicked(false);
   };
+
+
 
   return (
     <div

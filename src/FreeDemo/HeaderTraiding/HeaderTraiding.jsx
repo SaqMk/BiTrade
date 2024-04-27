@@ -33,12 +33,6 @@ export default function HeaderTraiding({ togglePanel, panelVisible }) {
       balance: "0",
     },
   ];
-  const [dataFromChildSecond, setDataFromChildSecond] = useState(null);
-
-  const handleDataSecond = (data) => {
-    console.log(data);
-    setDataFromChildSecond(data);
-  };
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

@@ -25,7 +25,13 @@ export default function FreeDemo() {
 
   const togglePanel = () => {
     setHorizontalPanel(false);
-    setPanelVisible(!panelVisible);
+    if (horizontalPanel) {
+      setTimeout(() => {
+        setPanelVisible(!panelVisible);
+      }, 500);
+    } else {
+      setPanelVisible(!panelVisible);
+    }
     setActiveIndex(0);
   };
 
@@ -52,6 +58,7 @@ export default function FreeDemo() {
           <HeaderTraidingSelectorV2
             horizontalPanel={horizontalPanel}
             activeIndex={activeIndex}
+            panelVisible={panelVisible}
           />
           <GraphicContainer sendProcToParent={handleProcChange} />
           <ControlGraphic parentProc={parentProc} />

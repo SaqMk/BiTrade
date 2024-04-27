@@ -10,16 +10,17 @@
   position: absolute;
   left: 7vw;
   width: 24vw;
-  transform-origin: left; /* Устанавливаем точку трансформации слева */
+  transform-origin: left;
   transition: transform 0.5s ease;
   z-index: 3;
 }
 .pass {
   transform: scaleX(0);
-  left: 0;
+  left: 7vw;
   transform-origin: left;
   transition: transform 0.5s ease;
 }
+
 .historyContainer {
   width: 21.5vw;
   height: 50vh;

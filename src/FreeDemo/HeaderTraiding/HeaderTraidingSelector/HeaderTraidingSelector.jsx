@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "../HeaderTraidingSelector/headerTraidingSelector.module.css";
 import traiding from "../../../images/traiding.svg";
 import history from "../../../images/historyc.svg";
@@ -7,7 +9,6 @@ import balance from "../../../images/balance.svg";
 import accountCircle from "../../../images/accountCircle.svg";
 import chat from "../../../images/chat.svg";
 import logout from "../../../images/logout.svg";
-
 import traidingDemo1 from "../../../images/traidingDemo1.svg";
 import historyDemo1 from "../../../images/historyDemo1.svg";
 import toptrDemo1 from "../../../images/toptrDemo1.svg";
@@ -16,11 +17,12 @@ import balanceDemo1 from "../../../images/balanceDemo1.svg";
 import accountCircleDemo1 from "../../../images/accountCircleDemo1.svg";
 import chatDemo1 from "../../../images/chatDemo1.svg";
 
-import React from "react";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
+function HorizontalPanel({
+  panelVisible,
+  togglePanelV2,
+  activeIndex,
+  horizontalPanel,
+}) {
   const state = [
     {
       id: 1,
@@ -34,7 +36,6 @@ function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
       img1: historyDemo1,
       title: "History",
     },
-
     {
       id: 3,
       img: toptr,
@@ -68,15 +69,19 @@ function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
   ];
 
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     function handleResize() {
       setBrowserHeight(window.innerHeight);
     }
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
   return (
     <div className={styles.horizontalPanel}>
       <div
@@ -89,7 +94,7 @@ function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
               key={ind}
               onClick={() => togglePanelV2(ind)}
               className={`${styles.contentContainer} ${
-                activeIndex === ind ? styles.active : ""
+                activeIndex === ind ? styles.active : styles.passive
               }`}
             >
               <img

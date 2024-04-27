@@ -34,7 +34,7 @@
 }
 .controlBuy {
   background-image: url("../../images/traingleBuy.svg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 8vw;
   height: 13vh;
@@ -48,7 +48,7 @@
 
 .controlSale {
   background-image: url("../../images/traingleSale.svg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 8vw;
   height: 13vh;

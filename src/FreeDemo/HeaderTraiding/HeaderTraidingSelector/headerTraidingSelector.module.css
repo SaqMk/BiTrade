@@ -37,6 +37,7 @@
   font-size: 1vw;
   color: white;
   cursor: pointer;
+  
 }
 .contentContainer:last-child {
   margin-bottom: 1vw;
@@ -56,6 +57,9 @@
 .active {
   background-color: #5a625d;
   border: 0.1px solid white;
+}
+.passive{
+  border: 0.1px solid transparent
 }
 .activePharagraph {
   color: white;
