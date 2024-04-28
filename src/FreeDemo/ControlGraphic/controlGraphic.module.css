@@ -62,7 +62,7 @@
   color: white;
 }
 .procentBuy {
-  top: 1.5vw;
+  top: 1.7vw;
   position: absolute;
   font-size: 1vw;
   color: #9eb797;
@@ -73,15 +73,13 @@
   font-size: 1.3vw;
 }
 .procentSale {
-  top: 3vw;
+  top: 2.7vw;
   position: absolute;
-
   font-size: 1vw;
   color: #9eb797;
 }
 .CountProcentSale {
   top: 1vw;
   position: absolute;
-
   font-size: 1.3vw;
 }

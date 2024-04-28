@@ -5,7 +5,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  margin-top: 0.2vw;
   width: 6.5vw;
+  height: 80%;
+  cursor: pointer;
 }
 .targetChooseContainer {
   display: flex;

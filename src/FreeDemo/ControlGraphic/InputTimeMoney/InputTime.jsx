@@ -24,6 +24,18 @@ export default function InputTime() {
     .toString()
     .padStart(2, "0")}`;
 
+  const incrementTime = () => {
+    const newTime = new Date(currentTime.getTime());
+    newTime.setMinutes(newTime.getMinutes() + 1);
+    setCurrentTime(newTime);
+  };
+
+  const decrementTime = () => {
+    const newTime = new Date(currentTime.getTime());
+    newTime.setMinutes(newTime.getMinutes() - 1);
+    setCurrentTime(newTime);
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.time}>
@@ -35,8 +47,8 @@ export default function InputTime() {
         <p className={styles.timeP}>{formattedTime}</p>
       </div>
       <div className={styles.controlTime}>
-        <img src={plus} alt="" />
-        <img src={minus} alt="" />
+        <img src={plus} alt="" onClick={incrementTime} />
+        <img src={minus} alt="" onClick={decrementTime} />
       </div>
     </div>
   );

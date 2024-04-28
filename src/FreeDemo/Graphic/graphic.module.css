@@ -5,7 +5,6 @@
   margin-left: -7vw;
   width: 88%;
   color: white;
-  cursor: pointer;
 }
 .graphicTime {
   height: 4vh;
@@ -102,4 +101,12 @@
   background-color: #00e7e7;
   border-radius: 0.5vw;
   border: 1px solid;
+}
+.instrumentContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 13vw;
+  height: 5vh;
+  margin-top: 7vw;
+  margin-left: 10vw;
 }

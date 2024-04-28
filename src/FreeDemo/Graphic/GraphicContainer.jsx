@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../Graphic/graphic.module.css";
 import TargetSelector from "./TargetSelector/TargetSelector";
+import InstrumentItem from "./instrumentItem/InstrumentItem";
 
 export default function GraphicContainer({ sendProcToParent }) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
@@ -91,6 +92,9 @@ export default function GraphicContainer({ sendProcToParent }) {
                 </div>
               ))}
           </div>
+        </div>
+        <div className={styles.instrumentContainer}>
+          <InstrumentItem isSelectorOpen={isSelectorOpen} />
         </div>
       </div>
       <div className={styles.graphicTime}></div>
