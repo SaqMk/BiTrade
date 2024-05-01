@@ -6,7 +6,7 @@ import monitoring from "../../../images/monitoring.svg";
 import Vector from "../../../images/Vector.svg";
 import doubleWindow from "../../../images/doubleWindow.svg";
 
-export default function InstrumentItem() {
+export default function InstrumentItem(isSelectorOpen) {
   const insItem = [
     {
       id: 1,
@@ -66,7 +66,8 @@ export default function InstrumentItem() {
     setActiveM6(false);
   };
 
-  console.log(selectedM6);
+  console.log(isSelectorOpen);
+
   return (
     <>
       {insItem.map((item, index) => (

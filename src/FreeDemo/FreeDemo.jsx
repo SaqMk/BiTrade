@@ -28,7 +28,7 @@ export default function FreeDemo() {
     if (horizontalPanel) {
       setTimeout(() => {
         setPanelVisible(!panelVisible);
-      }, 500);
+      }, 200);
     } else {
       setPanelVisible(!panelVisible);
     }
@@ -38,7 +38,9 @@ export default function FreeDemo() {
   const togglePanelV2 = (ind) => {
     setHorizontalPanel(true);
     setActiveIndex(ind);
-    ind == 0 || ind == 5 ? setHorizontalPanel(false) : setHorizontalPanel(true);
+    ind == 0 || ind == 6 || ind == 2 || ind == 3 || ind == 5
+      ? setHorizontalPanel(false)
+      : setHorizontalPanel(true);
   };
 
   const handleProcChange = (proc) => {

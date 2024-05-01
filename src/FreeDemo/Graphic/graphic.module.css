@@ -57,21 +57,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 18vw;
-  height: 8.6vh;
+  width: 17.5vw;
+  height: 8vh;
+  margin-top: 1vw;
 }
 .targetSelectorOpenWrapper input {
-  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.8vw;
   height: 3.6vh;
   border-radius: 0.3vw;
-  padding-left: 0.3vw;
+  padding-left: 0.8vw;
   border: 1px solid #b9b6b6;
   background-color: transparent;
   color: white;
   cursor: pointer;
 }
 ::placeholder {
-  font-size: 1.1vw;
+  font-size: 1vw;
 }
 .targetSelectorOpenWrapper button {
   width: 2vw;
@@ -81,8 +85,8 @@
   border: 0.1px solid #b9b6b6;
 }
 .scrollItem {
-  width: 86%;
-  height: 4.3vh;
+  width: 82%;
+  height: 4.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,6 +94,10 @@
   background-color: #8c9090;
   border-radius: 0.5vw;
   border: 1px solid;
+  margin-top: 0.8vw;
+}
+.scrollItem:first-child {
+  margin-top: 0;
 }
 .scrollItemPass {
   width: 86%;
@@ -102,11 +110,42 @@
   border-radius: 0.5vw;
   border: 1px solid;
 }
-.instrumentContainer{
+.instrumentContainer {
   display: flex;
   justify-content: space-between;
   width: 13vw;
   height: 5vh;
   margin-top: 7vw;
   margin-left: 10vw;
+}
+.verticalScroll {
+  overflow-y: auto;
+  width: 88%;
+  margin-top: 1vw;
+}
+.verticalScroll::-webkit-scrollbar {
+  width: 0.6vw; /* Ширина полосы прокрутки */
+}
+
+.verticalScroll::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.verticalScroll::-webkit-scrollbar-track {
+  border: 1px solid;
+}
+.filterButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.filterIcon{
+  font-size: 5rem;
+}
+.targetContentTitle{
+  font-size: 1.2vw;
+}
+.targetContentProcent{
+  font-size: 1vw;
 }

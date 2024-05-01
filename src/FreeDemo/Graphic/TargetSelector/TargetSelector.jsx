@@ -28,18 +28,158 @@ export default function TargetSelector({
     },
     {
       img: flag,
-      title: "NO",
-      procent: "NO",
+      title: "EUR/USD",
+      procent: "82",
     },
     {
       img: flag,
-      title: "NO",
-      procent: "NO",
+      title: "AMD/USD",
+      procent: "23",
     },
     {
       img: flag,
-      title: "NO",
-      procent: "NO",
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
+    }, {
+      img: flag,
+      title: "EUR/USD",
+      procent: "82",
+    },
+    {
+      img: flag,
+      title: "AMD/USD",
+      procent: "23",
+    },
+    {
+      img: flag,
+      title: "RUB/USD",
+      procent: "52",
     },
   ];
   useEffect(() => {

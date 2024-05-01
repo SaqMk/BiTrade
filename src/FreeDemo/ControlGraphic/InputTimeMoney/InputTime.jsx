@@ -32,7 +32,7 @@ export default function InputTime() {
 
     const interval = setInterval(() => {
       handleTimeControl(incrementBy)
-    }, 60 * 1000)
+    }, 1000)
 
     return () => clearInterval(interval)
   }, [incrementBy])
