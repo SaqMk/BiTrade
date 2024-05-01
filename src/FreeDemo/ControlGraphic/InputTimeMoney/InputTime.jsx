@@ -5,58 +5,37 @@ import plus from "../../../images/plus.svg";
 import minus from "../../../images/minus.svg";
 
 export default function InputTime() {
-  const [time, setTime] = useState({ hours: 0, minutes: 0 });
-
-  useEffect(() => {
-    const current = new Date();
-    setTime({ hours: current.getHours(), minutes: current.getMinutes() + 1 });
-  }, []);
+  const [time, setTime] = useState(() => ({ hours: new Date().getHours(), minutes: new Date().getMinutes() + 1 }));
+  const [incrementBy, setIncrementBy] = useState(0)
 
   const formattedTime = () => {
     return `${time.hours}:${time.minutes.toString().padStart(2, "0")}`;
   };
 
-  const incrementTime = () => {
-    setTime((prevTime) => {
-      let newMinutes = prevTime.minutes + 1;
-      let newHours = prevTime.hours;
+  const handleTimeControl = (value) => {
+    const newDate = { hours: new Date().getHours(), minutes: new Date().getMinutes() + 1 }
 
-      if (newMinutes >= 60) {
-        newMinutes %= 60;
-        newHours = (newHours + 1) % 24;
-      }
+    const newMinutes = (newDate.minutes + value) % 60
 
-      return { hours: newHours, minutes: newMinutes };
-    });
-  };
+    const hourDifference = Math.floor((newDate.minutes + value) / 60)
+    
+    if(hourDifference > 0) {
+      newDate.hours += hourDifference
+    }
 
-  const decrementTime = () => {
-    setTime((prevTime) => {
-      let newMinutes = prevTime.minutes - 1;
-      let newHours = prevTime.hours;
-      if (newMinutes < 0) {
-        newMinutes += 60;
-        newHours = (newHours - 1 + 24) % 24;
-      }
-      if (
-        newHours === new Date().getHours() &&
-        newMinutes < new Date().getMinutes() + 1
-      ) {
-        newMinutes = new Date().getMinutes() + 1;
-      }
-      const currentTime = new Date();
-      if (
-        newHours < currentTime.getHours() ||
-        (newHours === currentTime.getHours() &&
-          newMinutes <= currentTime.getMinutes())
-      ) {
-        newHours = currentTime.getHours();
-        newMinutes = currentTime.getMinutes();
-      }
+    newDate.minutes = newMinutes
+    setTime(newDate)
+  }
 
-      return { hours: newHours, minutes: newMinutes };
-    });
-  };
+  useEffect(() => {
+    handleTimeControl(incrementBy)
+
+    const interval = setInterval(() => {
+      handleTimeControl(incrementBy)
+    }, 60 * 1000)
+
+    return () => clearInterval(interval)
+  }, [incrementBy])
 
   return (
     <div className={styles.wrapper}>
@@ -69,8 +48,8 @@ export default function InputTime() {
         <p className={styles.timeP}>{formattedTime()}</p>
       </div>
       <div className={styles.controlTime}>
-        <img src={plus} alt="" onClick={incrementTime} />
-        <img src={minus} alt="" onClick={decrementTime} />
+        <img src={plus} alt="" onClick={() => setIncrementBy(prev => prev + 1)} />
+        <img src={minus} alt="" onClick={() => setIncrementBy(prev => prev !== 0 ? prev - 1 : prev)} />
       </div>
     </div>
   );
