@@ -5,35 +5,57 @@ import plus from "../../../images/plus.svg";
 import minus from "../../../images/minus.svg";
 
 export default function InputTime() {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [time, setTime] = useState({ hours: 0, minutes: 0 });
 
   useEffect(() => {
-    const timerID = setInterval(() => tick(), 1000);
-
-    return () => {
-      clearInterval(timerID);
-    };
+    const current = new Date();
+    setTime({ hours: current.getHours(), minutes: current.getMinutes() + 1 });
   }, []);
 
-  const tick = () => {
-    setCurrentTime(new Date());
+  const formattedTime = () => {
+    return `${time.hours}:${time.minutes.toString().padStart(2, "0")}`;
   };
 
-  const formattedTime = `${currentTime.getHours()}:${currentTime
-    .getMinutes()
-    .toString()
-    .padStart(2, "0")}`;
-
   const incrementTime = () => {
-    const newTime = new Date(currentTime.getTime());
-    newTime.setMinutes(newTime.getMinutes() + 1);
-    setCurrentTime(newTime);
+    setTime((prevTime) => {
+      let newMinutes = prevTime.minutes + 1;
+      let newHours = prevTime.hours;
+
+      if (newMinutes >= 60) {
+        newMinutes %= 60;
+        newHours = (newHours + 1) % 24;
+      }
+
+      return { hours: newHours, minutes: newMinutes };
+    });
   };
 
   const decrementTime = () => {
-    const newTime = new Date(currentTime.getTime());
-    newTime.setMinutes(newTime.getMinutes() - 1);
-    setCurrentTime(newTime);
+    setTime((prevTime) => {
+      let newMinutes = prevTime.minutes - 1;
+      let newHours = prevTime.hours;
+      if (newMinutes < 0) {
+        newMinutes += 60;
+        newHours = (newHours - 1 + 24) % 24;
+      }
+      if (
+        newHours === new Date().getHours() &&
+        newMinutes < new Date().getMinutes() + 1
+      ) {
+        newMinutes = new Date().getMinutes() + 1;
+      }
+      const currentTime = new Date();
+      if (
+        newHours < currentTime.getHours() ||
+        (newHours === currentTime.getHours() &&
+          newMinutes <= currentTime.getMinutes())
+      ) {
+        newHours = currentTime.getHours();
+        newMinutes = currentTime.getMinutes();
+      }
+
+      return { hours: newHours, minutes: newMinutes };
+    });
   };
 
   return (
@@ -44,7 +66,7 @@ export default function InputTime() {
           src={controlTimeIcon}
           alt="Time icon"
         />
-        <p className={styles.timeP}>{formattedTime}</p>
+        <p className={styles.timeP}>{formattedTime()}</p>
       </div>
       <div className={styles.controlTime}>
         <img src={plus} alt="" onClick={incrementTime} />

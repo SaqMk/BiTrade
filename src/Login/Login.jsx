@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import Header from "../HeaderFooter/Header";
 import styles from "../Login/login.module.css";
 import Footer from "../HeaderFooter/Footer";
-import rafiki from "../images/rafiki.svg";
 import { Link } from "react-router-dom";
 export default function Register() {
   const [checked, setChecked] = useState(false);
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+  console.log(checked);
+
   return (
     <>
       <Header />
@@ -51,6 +49,7 @@ export default function Register() {
                 className={`${
                   checked ? styles.activeButton : styles.RegisterPageButton
                 }`}
+                onClick={() => setChecked(!checked)}
               >
                 Register
               </button>

@@ -65,3 +65,12 @@
     align-items: center;
     justify-content: center;
 }
+.activeItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5vw;
+  height: 3vh;
+  border-radius: 0.2vw;
+  background-color: #747976;
+}

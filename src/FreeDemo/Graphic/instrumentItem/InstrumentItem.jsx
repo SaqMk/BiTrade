@@ -66,6 +66,7 @@ export default function InstrumentItem() {
     setActiveM6(false);
   };
 
+  console.log(selectedM6);
   return (
     <>
       {insItem.map((item, index) => (
@@ -84,7 +85,13 @@ export default function InstrumentItem() {
               {activeM6 && (
                 <div className={styles.contentContainer}>
                   {graphicContent.map((e, index1) => (
-                    <div key={index1} onClick={() => clickChangeM6(e.name)} className={styles.containerChooseLan}>
+                    <div
+                      key={index1}
+                      onClick={() => clickChangeM6(e.name)}
+                      className={`${styles.containerChooseLan} ${
+                        e.name === selectedM6 ? styles.activeItem : ""
+                      }`}
+                    >
                       <p className={styles.selectorItem}>{e.name}</p>
                     </div>
                   ))}

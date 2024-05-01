@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "../HeaderFooter/Header";
 import styles from "../Register/register.module.css";
 import Footer from "../HeaderFooter/Footer";
-import rafiki from "../images/rafiki.svg";
 import { Link } from "react-router-dom";
 export default function Register() {
   const [checked, setChecked] = useState(false);
