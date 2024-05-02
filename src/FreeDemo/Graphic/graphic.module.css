@@ -10,6 +10,7 @@
   height: 4vh;
   background-color: #2c2b30;
   border-top: 0.1px solid #a1a09f;
+  z-index: 3;
 }
 .target {
   display: flex;
@@ -95,6 +96,9 @@
   border-radius: 0.5vw;
   border: 1px solid;
   margin-top: 0.8vw;
+}
+.scrollItem img{
+  width: 2vw;
 }
 .scrollItem:first-child {
   margin-top: 0;

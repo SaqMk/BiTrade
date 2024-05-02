@@ -25,13 +25,37 @@
   width: 8vw;
 }
 .headerIcon {
-  width: 9vw;
-  height: 3.8vh;
+  width: 11vw;
 }
 .burMenu {
+  position: absolute;
+  top: 50%; /* Перемещаем на половину высоты */
+  transform: translateY(
+    -50%
+  ); /* Корректируем положение по вертикали на обратное значение половины высоты */
+  left: 2.5vw;
   cursor: pointer;
-  width: 2vw;
+  z-index: 50;
+  width: 1.3vw;
+
 }
+
+.firstMargin,
+.secondMargin {
+  position: absolute;
+  top: 50%;
+  font-size: 3vw;
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+.firstMargin {
+  left: 8vw;
+}
+
+.secondMargin {
+  left: 32vw;
+}
+
 .accImg {
   width: 2.6vw;
 }

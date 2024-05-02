@@ -58,10 +58,21 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
             ))}
           </div>
           {activeButtonIndex === 0 && (
-            <div style={{ color: "white" }}>Content for Open</div>
+            <div style={{ color: "white" }}>
+              <p className={styles.historyDealsTitle}>6 deals</p>
+              <div className={styles.historyDealsContainer}>
+                <div className={styles.historyDelasWrapper}></div>
+                <div className={styles.historyDelasWrapper}></div>
+              </div>
+            </div>
           )}
           {activeButtonIndex === 1 && (
-            <div style={{ color: "white" }}>Content for Closed</div>
+            <div style={{ color: "white" }}>
+              <div className={styles.historyDealsContainer}>
+                <div className={styles.historyDelasWrapper}></div>
+                <div className={styles.historyDelasWrapper}></div>
+              </div>
+            </div>
           )}
         </div>
       )}

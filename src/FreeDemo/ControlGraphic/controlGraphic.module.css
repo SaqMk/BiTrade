@@ -3,6 +3,7 @@
   justify-content: center;
   width: 12%;
   border-left: 0.1px solid #a1a09f;
+  background-color: rgba(216, 216, 216, 0.1);
 }
 .controlContainer {
   display: flex;

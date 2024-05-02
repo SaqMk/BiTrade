@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../Graphic/graphic.module.css";
 import TargetSelector from "./TargetSelector/TargetSelector";
 import InstrumentItem from "./instrumentItem/InstrumentItem";
 import { IoFilterSharp } from "react-icons/io5";
-import { CiStar } from "react-icons/ci";
+import { MdStar } from "react-icons/md";
 
 export default function GraphicContainer({ sendProcToParent }) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
@@ -12,6 +12,9 @@ export default function GraphicContainer({ sendProcToParent }) {
   const [flagImg, setFlagImg] = useState(null);
   const [targetTitle, setTargetTitle] = useState(null);
   const [proc, setProc] = useState(null);
+  const [selectedStars, setSelectedStars] = useState([]);
+
+  const panelRef = useRef(null);
 
   const handleData = (data) => {
     setDataFromChild(data);
@@ -48,9 +51,6 @@ export default function GraphicContainer({ sendProcToParent }) {
     }
   }, [proc]);
 
-  const [selectedStarIndex, setSelectedStarIndex] = useState(null);
-  const [selectedStars, setSelectedStars] = useState([]);
-
   const handleStarClick = (index, event) => {
     event.stopPropagation();
     if (selectedStars.includes(index)) {
@@ -62,13 +62,27 @@ export default function GraphicContainer({ sendProcToParent }) {
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (panelRef.current && !panelRef.current.contains(event.target)) {
+        setIsSelectorOpen(false);
+        // Здесь вы можете добавить дополнительную логику для закрытия других панелей, если они есть
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
-      style={{ height: `calc(${browserHeight} - 5vw)` }}
       className={styles.container}
     >
       <div className={styles.graphicWrapper}>
-        <div className={styles.selectWrapper}>
+        <div className={styles.selectWrapper} ref={panelRef}>
           <div
             onClick={handleClick}
             className={`${isSelectorOpen ? styles.target : styles.targetPass}`}
@@ -114,7 +128,8 @@ export default function GraphicContainer({ sendProcToParent }) {
                     <p className={styles.targetContentProcent}>
                       {item.procent}%
                     </p>
-                    <CiStar
+                    
+                    <MdStar
                       className={styles.starIcon}
                       style={{
                         color: selectedStars.includes(index) ? "gold" : "black",

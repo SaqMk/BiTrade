@@ -26,9 +26,7 @@ export default function FreeDemo() {
   const togglePanel = () => {
     setHorizontalPanel(false);
     if (horizontalPanel) {
-      setTimeout(() => {
-        setPanelVisible(!panelVisible);
-      }, 200);
+      setHorizontalPanel(!horizontalPanel)
     } else {
       setPanelVisible(!panelVisible);
     }
@@ -48,9 +46,9 @@ export default function FreeDemo() {
   };
 
   return (
-    <div style={{ height: browserHeight }} className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.wrapper}>
-        <HeaderTraiding panelVisible={panelVisible} togglePanel={togglePanel} />
+        <HeaderTraiding panelVisible={panelVisible} togglePanel={togglePanel} horizontalPanel={horizontalPanel} />
         <div className={styles.ContentContainer}>
           <HeaderTraidingSelector
             panelVisible={panelVisible}

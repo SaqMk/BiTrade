@@ -39,6 +39,6 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 0.8vw;
-  background: #546656;
-
+  background: #303e32;
+  border: 0.1px solid white;
 }

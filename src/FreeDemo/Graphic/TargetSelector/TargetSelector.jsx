@@ -187,7 +187,6 @@ export default function TargetSelector({
     sendData(data);
   }, []);
 
-  console.log(proc);
   return (
     <>
       <img className={styles.targetImg} src={flagImg} alt="" />

@@ -15,8 +15,7 @@ export default function () {
             assets{" "}
           </p>
           <Link to="login">
-
-          <button className={styles.button}>Start Trading</button>
+            <button className={styles.button}>Start Trading</button>
           </Link>
         </div>
       </div>
