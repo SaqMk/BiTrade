@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../Graphic/graphic.module.css";
 import TargetSelector from "./TargetSelector/TargetSelector";
 import InstrumentItem from "./instrumentItem/InstrumentItem";
+import { IoFilterSharp } from "react-icons/io5";
+import { MdStar } from "react-icons/md";
 
 export default function GraphicContainer({ sendProcToParent }) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
@@ -10,6 +12,9 @@ export default function GraphicContainer({ sendProcToParent }) {
   const [flagImg, setFlagImg] = useState(null);
   const [targetTitle, setTargetTitle] = useState(null);
   const [proc, setProc] = useState(null);
+  const [selectedStars, setSelectedStars] = useState([]);
+
+  const panelRef = useRef(null);
 
   const handleData = (data) => {
     setDataFromChild(data);
@@ -46,16 +51,42 @@ export default function GraphicContainer({ sendProcToParent }) {
     }
   }, [proc]);
 
+  const handleStarClick = (index, event) => {
+    event.stopPropagation();
+    if (selectedStars.includes(index)) {
+      setSelectedStars(
+        selectedStars.filter((starIndex) => starIndex !== index)
+      );
+    } else {
+      setSelectedStars([...selectedStars, index]);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (panelRef.current && !panelRef.current.contains(event.target)) {
+        setIsSelectorOpen(false);
+        // Здесь вы можете добавить дополнительную логику для закрытия других панелей, если они есть
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
-      style={{ height: `calc(${browserHeight} - 5vw)` }}
       className={styles.container}
     >
       <div className={styles.graphicWrapper}>
-        <div className={styles.selectWrapper}>
+        <div className={styles.selectWrapper} ref={panelRef}>
           <div
             onClick={handleClick}
             className={`${isSelectorOpen ? styles.target : styles.targetPass}`}
+            style={{border:'1px solid white'}}
           >
             <TargetSelector
               isSelectorOpen={isSelectorOpen}
@@ -67,30 +98,51 @@ export default function GraphicContainer({ sendProcToParent }) {
           </div>
           <div className={isSelectorOpen ? styles.targetOpenSelector : ""}>
             {dataFromChild && isSelectorOpen && (
-              <div className={styles.targetSelectorOpenWrapper}>
+              <div className={`${styles.targetSelectorOpenWrapper}`}>
                 <input
                   placeholder="Search"
                   type="text"
                   id="site-search"
                   name="q"
                 />
-                <button></button>
+                <button className={styles.filterButton}>
+                  <IoFilterSharp className={styles.filterIcon} />
+                </button>
               </div>
             )}
-            {dataFromChild &&
-              isSelectorOpen &&
-              dataFromChild.map((item, index) => (
-                <div
-                  className={styles.scrollItem}
-                  key={index}
-                  onClick={() =>
-                    handleClickChooseTarget(item.img, item.title, item.procent)
-                  }
-                >
-                  <p>{item.title}</p>
-                  <p>{item.procent}%</p>
-                </div>
-              ))}
+            {dataFromChild && isSelectorOpen && (
+              <div className={styles.verticalScroll}>
+                {dataFromChild.map((item, index) => (
+                  <div
+                    className={styles.scrollItem}
+                    key={index}
+                    onClick={() =>
+                      handleClickChooseTarget(
+                        item.img,
+                        item.title,
+                        item.procent
+                      )
+                    }
+                  >
+                    <img src={item.img} alt="" />
+                    <p className={styles.targetContentTitle}>{item.title}</p>
+                    <p className={styles.targetContentProcent}>
+                      {item.procent}%
+                    </p>
+                    
+                    <MdStar
+                      className={styles.starIcon}
+                      style={{
+                        color: selectedStars.includes(index) ? "gold" : "black",
+                        fontSize: "1.5vw",
+                        cursor: "pointer",
+                      }}
+                      onClick={(event) => handleStarClick(index, event)}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.instrumentContainer}>

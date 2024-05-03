@@ -7,8 +7,13 @@ import profileCircle from "../../images/profileCircle.png";
 import { Link } from "react-router-dom";
 import { HiChevronRight } from "react-icons/hi";
 import { useState } from "react";
-
-export default function HeaderTraiding({ togglePanel, panelVisible }) {
+import { PiArrowRightThin } from "react-icons/pi";
+import arrow from '../../images/arrow.svg'
+export default function HeaderTraiding({
+  togglePanel,
+  panelVisible,
+  horizontalPanel,
+}) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
   const [lan, setLan] = useState("Demo");
   const [balanc, setBalanc] = useState("10000");
@@ -35,15 +40,22 @@ export default function HeaderTraiding({ togglePanel, panelVisible }) {
       balance: "0",
     },
   ];
+  console.log(horizontalPanel);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.iconContainer}>
           <img
             onClick={togglePanel}
-            src={panelVisible ? bmenuWhite : bmenu}
+            src={arrow}
             alt=" "
-            className={styles.burMenu}
+            className={`${styles.burMenu} ${
+              panelVisible
+                ? horizontalPanel
+                  ? styles.secondMargin
+                  : styles.firstMargin
+                : ""
+            }`}
           />
           <Link to="/">
             <img className={styles.headerIcon} alt="" src={HeaderIcon} />

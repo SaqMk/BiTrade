@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../instrumentItem/instrumentItem.module.css";
 import { VscTriangleDown } from "react-icons/vsc";
 import graphicIcon from "../../../images/graphicIcon.svg";
@@ -6,7 +6,7 @@ import monitoring from "../../../images/monitoring.svg";
 import Vector from "../../../images/Vector.svg";
 import doubleWindow from "../../../images/doubleWindow.svg";
 
-export default function InstrumentItem() {
+export default function InstrumentItem(isSelectorOpen) {
   const insItem = [
     {
       id: 1,
@@ -66,7 +66,26 @@ export default function InstrumentItem() {
     setActiveM6(false);
   };
 
-  console.log(selectedM6);
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // Проверяем, был ли клик вне панели
+      if (
+        activeM6 &&
+        !event.target.closest(`.${styles.insItemsFirst}`)
+      ) {
+        setActiveM6(false); // Закрываем панель
+      }
+    };
+
+    // Добавляем обработчик события при монтировании компонента
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    // Убираем обработчик события при размонтировании компонента
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [activeM6]);
+
   return (
     <>
       {insItem.map((item, index) => (
