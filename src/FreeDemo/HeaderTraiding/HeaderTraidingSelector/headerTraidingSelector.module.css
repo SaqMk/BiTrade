@@ -3,20 +3,16 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(179, 176, 176, 0.2),
-    rgba(0, 0, 0, 0.7)
-  );
+  background: linear-gradient(to bottom, rgba(7, 7, 7, 0.2), rgba(0, 0, 0, 0.7));
 
   border-right: 0.1px solid #a1a09f;
   transform: translateX(-100%);
-  transition: transform 0.1s ease;
+  /* transition: transform 0.15s ease; */
   width: 7vw;
 }
 .visible {
   transform: translateX(0);
-  transition: transform 0.1s ease;
+  /* transition: transform 0.15s ease; */
 }
 
 .horizontalPanel {
@@ -38,16 +34,13 @@
   color: white;
   cursor: pointer;
 }
-.contentContainer:last-child {
-  margin-bottom: 1vw;
-}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   margin-top: 1vw;
-  height: auto;
 }
 .itemImg {
   width: 2vw;

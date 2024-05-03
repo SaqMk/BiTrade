@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../HomeSectionDemo/HomeSectionDemo.module.css";
-import PhoneImg from "../../images/PhoneImg.svg";
+// import PhoneImg from "../../images/PhoneImg.svg";
+import Macbook from "../../images/Macbook6.svg";
 import { Link } from "react-router-dom";
 export default function HomeSectionDemo() {
   return (
@@ -16,7 +17,7 @@ export default function HomeSectionDemo() {
           </Link>
         </div>
         <div className={styles.phoneImg}>
-          <img src={PhoneImg} />
+          <img src={Macbook} />
         </div>
       </div>
     </div>

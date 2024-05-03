@@ -1,6 +1,7 @@
 import styles from "../HeaderTraidingSelectorV2/headerTraidingSelectorV2.module.css";
 import React, { useEffect, useState } from "react";
 import walletBalnce from "../../../../images/walletBalance.svg";
+import depoImg from "../../../../images/depoImg.svg";
 function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
@@ -30,7 +31,7 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
 
   return (
     <div
-      style={{ height: `calc(${browserHeight}px - 5vw)` }}
+      style={{ height: `calc(${browserHeight}px - 6.05vw)` }}
       className={`${styles.horizontal} ${
         horizontalPanel ? styles.visible : styles.pass
       }`}
@@ -90,7 +91,7 @@ function HeaderTraidingSelectorV2({ horizontalPanel, activeIndex }) {
               </div>
               <div className={styles.balanceButton}>
                 <button className={styles.buttonDepo}>
-                  <img src={walletBalnce} alt="" />
+                  <img src={depoImg} alt="" />
                   <b>Deposit</b>
                 </button>
                 <button className={styles.buttonWithdraw}>

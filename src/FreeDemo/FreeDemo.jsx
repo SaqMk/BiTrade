@@ -26,7 +26,7 @@ export default function FreeDemo() {
   const togglePanel = () => {
     setHorizontalPanel(false);
     if (horizontalPanel) {
-      setHorizontalPanel(!horizontalPanel)
+      setHorizontalPanel(!horizontalPanel);
     } else {
       setPanelVisible(!panelVisible);
     }
@@ -48,19 +48,27 @@ export default function FreeDemo() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <HeaderTraiding panelVisible={panelVisible} togglePanel={togglePanel} horizontalPanel={horizontalPanel} />
-        <div className={styles.ContentContainer}>
+        <HeaderTraiding
+          panelVisible={panelVisible}
+          togglePanel={togglePanel}
+          horizontalPanel={horizontalPanel}
+        />
+       <div className={styles.ContentContainer}> 
           <HeaderTraidingSelector
             panelVisible={panelVisible}
             togglePanelV2={togglePanelV2}
             activeIndex={activeIndex}
-          />
+          /> 
           <HeaderTraidingSelectorV2
             horizontalPanel={horizontalPanel}
             activeIndex={activeIndex}
             panelVisible={panelVisible}
           />
-          <GraphicContainer sendProcToParent={handleProcChange} />
+          <GraphicContainer
+            horizontalPanel={horizontalPanel}
+            panelVisible={panelVisible}
+            sendProcToParent={handleProcChange}
+          />
           <ControlGraphic parentProc={parentProc} />
         </div>
       </div>

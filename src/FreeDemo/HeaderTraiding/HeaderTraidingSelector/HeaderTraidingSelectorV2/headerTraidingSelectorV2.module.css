@@ -3,9 +3,10 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, #333d38, #5d6f67);
+  background: linear-gradient(to bottom, #131714, #303c37);
 
   border-right: 0.1px solid #a1a09f;
+  border-bottom: 0.1px solid #a1a09f;
   transform: scaleX(7vw);
   position: absolute;
   left: 7vw;

@@ -5,7 +5,11 @@ import InstrumentItem from "./instrumentItem/InstrumentItem";
 import { IoFilterSharp } from "react-icons/io5";
 import { MdStar } from "react-icons/md";
 
-export default function GraphicContainer({ sendProcToParent }) {
+export default function GraphicContainer({
+  sendProcToParent,
+  horizontalPanel,
+  panelVisible,
+}) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
   const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
   const [dataFromChild, setDataFromChild] = useState(null);
@@ -66,7 +70,6 @@ export default function GraphicContainer({ sendProcToParent }) {
     const handleClickOutside = (event) => {
       if (panelRef.current && !panelRef.current.contains(event.target)) {
         setIsSelectorOpen(false);
-        // Здесь вы можете добавить дополнительную логику для закрытия других панелей, если они есть
       }
     };
 
@@ -78,15 +81,21 @@ export default function GraphicContainer({ sendProcToParent }) {
   }, []);
 
   return (
-    <div
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <div className={styles.graphicWrapper}>
-        <div className={styles.selectWrapper} ref={panelRef}>
+        <div
+          className={`${styles.selectWrapper} ${
+            panelVisible
+              ? horizontalPanel
+                ? styles.secondMargin
+                : styles.firstMargin
+              : ""
+          }`}
+          ref={panelRef}
+        >
           <div
             onClick={handleClick}
             className={`${isSelectorOpen ? styles.target : styles.targetPass}`}
-            style={{border:'1px solid white'}}
           >
             <TargetSelector
               isSelectorOpen={isSelectorOpen}
@@ -129,7 +138,7 @@ export default function GraphicContainer({ sendProcToParent }) {
                     <p className={styles.targetContentProcent}>
                       {item.procent}%
                     </p>
-                    
+
                     <MdStar
                       className={styles.starIcon}
                       style={{
@@ -145,8 +154,18 @@ export default function GraphicContainer({ sendProcToParent }) {
             )}
           </div>
         </div>
-        <div className={styles.instrumentContainer}>
-          <InstrumentItem isSelectorOpen={isSelectorOpen} />
+        <div className={`${styles.togInstrumentContainer} ${
+              panelVisible
+                ? horizontalPanel
+                  ? styles.secondMarginTog
+                  : styles.firstMarginTog
+                : ""
+            }`}>
+          <div
+            className={styles.instrumentContainer}
+          >
+            <InstrumentItem isSelectorOpen={isSelectorOpen} />
+          </div>
         </div>
       </div>
       <div className={styles.graphicTime}></div>

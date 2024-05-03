@@ -6,7 +6,7 @@ import monitoring from "../../../images/monitoring.svg";
 import Vector from "../../../images/Vector.svg";
 import doubleWindow from "../../../images/doubleWindow.svg";
 
-export default function InstrumentItem(isSelectorOpen) {
+export default function InstrumentItem() {
   const insItem = [
     {
       id: 1,
@@ -77,10 +77,8 @@ export default function InstrumentItem(isSelectorOpen) {
       }
     };
 
-    // Добавляем обработчик события при монтировании компонента
     document.addEventListener("mousedown", handleOutsideClick);
 
-    // Убираем обработчик события при размонтировании компонента
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };

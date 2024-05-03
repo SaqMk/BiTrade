@@ -1,42 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../HeaderFooter/selector.module.css";
-import enLanIcon from "../images/lanIcon.svg";
-import armicon from "../images/armicon.png";
-import spIcon from "../images/spIcon.webp";
 import { HiChevronRight } from "react-icons/hi";
+
+import lanIconArm from "../images/lanIconArm.svg";
+import lanIconEng from "../images/lanIconEng.svg";
+import lanIconRus from "../images/lanIconRus.svg";
 
 const Selector = () => {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
-  const [lanIc, setLanIc] = useState(enLanIcon);
-
-  const toggleSelector = () => {
-    setIsSelectorOpen(!isSelectorOpen);
-  };
+  const [lanIc, setLanIc] = useState(lanIconArm);
+  const panelRef = useRef(null);
 
   const handleLanguageSelect = (lang, icon) => {
     setLan(lang);
     setLanIc(icon);
+    setIsSelectorOpen(false);
+  };
+  const toggleSelector = () => {
     setIsSelectorOpen(!isSelectorOpen);
   };
+  console.log(isSelectorOpen);
+
 
   const lanContent = [
     {
-      icon: enLanIcon,
-      name: "English",
-      shortName: "EN"
+      icon: lanIconArm,
+      name: "ARM",
+      shortName: "Հայերեն",
     },
     {
-      icon: spIcon,
-      name: "Русский",
-      shortName: "RU"
+      icon: lanIconRus,
+      name: "RUS",
+      shortName: "Русский",
     },
     {
-      icon: armicon,
-      name: "Հայերեն",
-      shortName: "ARM"
+      icon: lanIconEng,
+      name: "ENG",
+      shortName: "English",
     },
   ];
+
   const [lan, setLan] = useState(lanContent[0].name);
+
+  const handlePanelClick = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <>
@@ -45,20 +53,32 @@ const Selector = () => {
         onClick={toggleSelector}
         style={{ cursor: "pointer" }}
       >
-        <img className={styles.imgIcon} src={lanIc} />
+        <img className={styles.imgIcon} src={lanIc} alt="Language Icon" />
         <p className={styles.lanTitle}>{lan}</p>
-        <HiChevronRight className={` ${styles.iconContainer} ${isSelectorOpen ? styles.iconContainer : styles.iconClose}`}/>
-
+        <HiChevronRight
+          className={`${styles.iconContainer} ${
+            isSelectorOpen ? "" : styles.iconClose
+          }`}
+        />
       </div>
       {isSelectorOpen && (
-        <div className={styles.selectorContainer}>
+        <div
+          className={styles.selectorContainer}
+          ref={panelRef}
+          onClick={handlePanelClick}
+        >
           <ul>
             {lanContent.map((e) => (
               <div
-                onClick={() => handleLanguageSelect(` ${e.name}`, `${e.icon}`)}
+                key={e.name}
+                onClick={() => handleLanguageSelect(e.name, e.icon)}
                 className={styles.containerChooseLan}
               >
-                <img className={styles.imgIcon} src={e.icon} />
+                <img
+                  className={styles.imgIcon}
+                  src={e.icon}
+                  alt={e.shortName}
+                />
                 <li className={styles.selectorItem}>{e.shortName}</li>
               </div>
             ))}

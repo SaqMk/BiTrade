@@ -84,7 +84,7 @@ function HorizontalPanel({
   return (
     <div className={styles.horizontalPanel}>
       <div
-        style={{ height: `calc(${browserHeight}px - 5vw)` }}
+        style={{ height: `calc(${browserHeight}px - 5.05vw)` }}
         className={` ${styles.panel} ${panelVisible ? styles.visible : ""}`}
       >
         <div className={styles.wrapper}>

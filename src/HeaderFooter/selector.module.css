@@ -10,11 +10,15 @@
 .selectorContainer {
   display: flex;
   justify-content: space-between;
-  width: 5.2vw;
+  width: 6.5vw;
   position: absolute;
+  left: 70.9%;
+  top: 70%;
   border-radius: 1vw;
-  background-color: rgba(32, 32, 32, 0.2);
+  background-color: rgb(49, 61, 56);
   padding: 0.4vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   margin-top: 0.7vw;
 }
 .lanTitle {
@@ -31,7 +35,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.7vw;
+  margin-top:1vw;
   cursor: pointer;
 }
 .containerChooseLan:first-child {
@@ -40,9 +44,6 @@ ul {
 .generalContainer {
   width: 7vw;
   display: flex;
-  justify-content: flex-start;
-  align-items:end;
-
 }
 .imgIcon {
   width: 1.5vw;

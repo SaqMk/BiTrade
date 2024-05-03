@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import { HiChevronRight } from "react-icons/hi";
 import { useState } from "react";
 import { PiArrowRightThin } from "react-icons/pi";
-import arrow from '../../images/arrow.svg'
+import arrow from "../../images/arrow.svg";
+import arrowrot from "../../images/arrowrot.svg";
 export default function HeaderTraiding({
   togglePanel,
   panelVisible,
@@ -47,7 +48,7 @@ export default function HeaderTraiding({
         <div className={styles.iconContainer}>
           <img
             onClick={togglePanel}
-            src={arrow}
+            src={panelVisible ? (horizontalPanel ? arrow : arrow) : arrowrot}
             alt=" "
             className={`${styles.burMenu} ${
               panelVisible

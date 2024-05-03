@@ -8,16 +8,22 @@
   background-image: url("../../images/homeHero8.svg");
 }
 .wrapper {
-  width: 87%;
+  width: 99%;
   height: 52.2vh;
   margin-top: 30vh;
+  padding-left: 6.5%;
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+  background-color: rgba(0, 0, 0, 0.4); 
 }
+
 .contentContainer {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 40vw;
   height: 100%;
+
 }
 .title {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -39,6 +45,10 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 0.8vw;
-  background: #546656;
-
+  background: #38453a;
+  border:0.1px solid;
+  transition: 0.5s;
+}
+.button:hover{
+  border: 0.1px solid gray;
 }

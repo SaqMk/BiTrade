@@ -8,8 +8,8 @@
 }
 .graphicTime {
   height: 4vh;
-  background-color: #2c2b30;
-  border-top: 0.1px solid #a1a09f;
+  background-color: #383f3f;
+  border-bottom: 0.1px solid #a1a09f;
   z-index: 3;
 }
 .target {
@@ -29,10 +29,12 @@
   border: 1px solid #ffffff;
   border-radius: 0.3vw;
   padding: 0.2vw 0.4vw;
+  cursor: pointer;
 }
 .graphicWrapper {
   height: 100%;
 }
+
 .targetOpenSelector {
   display: flex;
   align-items: center;
@@ -46,13 +48,16 @@
   padding-bottom: 1vw;
 }
 .selectWrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 20vw;
   height: 55vh;
   margin-top: 5vh;
-  margin-left: 10vw;
+  margin-left: 2.8vw;
+  z-index: 5;
+  transition: transform 0.15s ease;
 }
 .targetSelectorOpenWrapper {
   display: flex;
@@ -97,7 +102,7 @@
   border: 1px solid;
   margin-top: 0.8vw;
 }
-.scrollItem img{
+.scrollItem img {
   width: 2vw;
 }
 .scrollItem:first-child {
@@ -119,8 +124,7 @@
   justify-content: space-between;
   width: 13vw;
   height: 5vh;
-  margin-top: 7vw;
-  margin-left: 10vw;
+  z-index: 50;
 }
 .verticalScroll {
   overflow-y: auto;
@@ -128,7 +132,7 @@
   margin-top: 1vw;
 }
 .verticalScroll::-webkit-scrollbar {
-  width: 0.6vw; /* Ширина полосы прокрутки */
+  width: 0.6vw;
 }
 
 .verticalScroll::-webkit-scrollbar-thumb {
@@ -138,18 +142,48 @@
 .verticalScroll::-webkit-scrollbar-track {
   border: 1px solid;
 }
-.filterButton{
+.filterButton {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.filterIcon{
+.filterIcon {
   font-size: 5rem;
 }
-.targetContentTitle{
+.targetContentTitle {
   font-size: 1.2vw;
 }
-.targetContentProcent{
+.targetContentProcent {
   font-size: 1vw;
+}
+.firstMargin {
+  margin-left: 10vw;
+  transition: transform 0.15s ease;
+}
+.secondMargin {
+  margin-left: 7vw;
+  z-index: 0;
+  transition: transform 0.15s ease;
+}
+.togInstrumentContainer {
+  position: absolute;
+  top: 54%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 20vw;
+  height: 40vh;
+  margin-left: 2.8vw;
+  z-index: 5;
+  transition: transform 0.15s ease;
+}
+.firstMarginTog {
+  margin-left: 10vw;
+  transition: transform 0.15s ease;
+}
+.secondMarginTog {
+  margin-left: 7vw;
+  z-index: 0;
+  transition: transform 0.15s ease;
 }

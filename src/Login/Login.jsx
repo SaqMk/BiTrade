@@ -51,7 +51,7 @@ export default function Register() {
                 }`}
                 onClick={() => setChecked(!checked)}
               >
-                Register
+                Login
               </button>
 
               <p className={styles.LogIn}>
