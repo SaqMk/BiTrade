@@ -6,7 +6,7 @@
   height: 5vw;
   /* background-color: rgba(216, 216, 216, 0.1);
    */
-   background: linear-gradient(to bottom, rgb(7, 7, 7, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to bottom, rgb(7, 7, 7, 0.2), rgba(0, 0, 0, 0.2));
 
   border-bottom: 0.1px solid #a1a09f;
 }
@@ -32,10 +32,8 @@
 }
 .burMenu {
   position: absolute;
-  top: 50%; /* Перемещаем на половину высоты */
-  transform: translateY(
-    -50%
-  ); /* Корректируем положение по вертикали на обратное значение половины высоты */
+  top: 50%;
+  transform: translateY(-50%);
   left: 1vw;
   cursor: pointer;
   z-index: 50;

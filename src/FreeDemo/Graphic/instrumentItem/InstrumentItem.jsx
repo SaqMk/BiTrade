@@ -69,10 +69,7 @@ export default function InstrumentItem() {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       // Проверяем, был ли клик вне панели
-      if (
-        activeM6 &&
-        !event.target.closest(`.${styles.insItemsFirst}`)
-      ) {
+      if (activeM6 && !event.target.closest(`.${styles.insItemsFirst}`)) {
         setActiveM6(false); // Закрываем панель
       }
     };

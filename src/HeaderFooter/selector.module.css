@@ -35,7 +35,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top:1vw;
+  margin-top: 1vw;
   cursor: pointer;
 }
 .containerChooseLan:first-child {
@@ -48,7 +48,7 @@ ul {
 .imgIcon {
   width: 1.5vw;
 }
-.iconContainer{
+.iconContainer {
   color: white;
   width: 1.5vw;
   height: auto;

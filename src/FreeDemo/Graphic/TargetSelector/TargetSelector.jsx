@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../TargetSelector/targetSelector.module.css";
 import flag from "../../../images/flag.svg";
 import { HiChevronRight } from "react-icons/hi";
@@ -40,7 +40,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -54,7 +55,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -68,7 +70,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -82,7 +85,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -96,7 +100,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -110,7 +115,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -124,7 +130,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -138,7 +145,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -152,7 +160,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -166,7 +175,8 @@ export default function TargetSelector({
       img: flag,
       title: "RUB/USD",
       procent: "52",
-    }, {
+    },
+    {
       img: flag,
       title: "EUR/USD",
       procent: "82",
@@ -192,7 +202,7 @@ export default function TargetSelector({
         <div className={styles.procentContainer}>
           <p
             className={`${
-              isSelectorOpen == false
+              isSelectorOpen === false
                 ? styles.targetProc
                 : styles.targetProcPass
             }`}

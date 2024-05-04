@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../HomeSectionDemo/HomeSectionDemo.module.css";
-// import PhoneImg from "../../images/PhoneImg.svg";
 import Macbook from "../../images/Macbook6.svg";
 import { Link } from "react-router-dom";
 export default function HomeSectionDemo() {

@@ -1,35 +1,34 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70vh;
-    background: linear-gradient(#c7c9c7,#F9FAF9);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(#c7c9c7, #f9faf9);
 }
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 87%;
-    height: 35vh;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 87%;
+  height: 35vh;
 }
-.title{
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 3vw;
-    color: black;
-    text-align: center;
+.title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 3vw;
+  color: black;
+  text-align: center;
 }
-.button{
+.button {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 1.7vw;
   color: white;
   border: none;
   width: 19vw;
-  height:11vh;
+  height: 11vh;
   cursor: pointer;
   background-color: transparent;
   border-radius: 0.8vw;
-  background: linear-gradient( #546656, #222322);
-
+  background: linear-gradient(#546656, #222322);
 }

@@ -154,16 +154,16 @@ export default function GraphicContainer({
             )}
           </div>
         </div>
-        <div className={`${styles.togInstrumentContainer} ${
-              panelVisible
-                ? horizontalPanel
-                  ? styles.secondMarginTog
-                  : styles.firstMarginTog
-                : ""
-            }`}>
-          <div
-            className={styles.instrumentContainer}
-          >
+        <div
+          className={`${styles.togInstrumentContainer} ${
+            panelVisible
+              ? horizontalPanel
+                ? styles.secondMarginTog
+                : styles.firstMarginTog
+              : ""
+          }`}
+        >
+          <div className={styles.instrumentContainer}>
             <InstrumentItem isSelectorOpen={isSelectorOpen} />
           </div>
         </div>

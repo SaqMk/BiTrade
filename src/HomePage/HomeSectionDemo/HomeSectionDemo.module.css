@@ -1,10 +1,10 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#CED5D0,#FEFEFE);
+  background: linear-gradient(#ced5d0, #fefefe);
 }
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,9 +23,9 @@
   width: 35vw;
   height: 69vh;
 }
-.phoneImg img{
-    width: 100%;
-    height: 100%;
+.phoneImg img {
+  width: 100%;
+  height: 100%;
 }
 .title {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -35,16 +35,15 @@
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 2.6vw;
 }
-.button{
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 1.2vw;
-    color: white;
-    border: none;
-    width: 8.6vw;
-    height:7vh;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 0.8vw;
-    background: linear-gradient(0.5turn, #546656, #222322);
-
-  }
+.button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.2vw;
+  color: white;
+  border: none;
+  width: 8.6vw;
+  height: 7vh;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.8vw;
+  background: linear-gradient(0.5turn, #546656, #222322);
+}

@@ -33,17 +33,17 @@
   font-size: 1.5vw;
   color: white;
 }
-.historyDealsTitle{
+.historyDealsTitle {
   font-size: 1.1vw;
-  color: #B9B6B6;
+  color: #b9b6b6;
   margin-top: 2.2vw;
 }
-.historyDelasWrapper{
+.historyDelasWrapper {
   width: 21.4vw;
   height: 10.6vh;
   border: 1px solid;
 }
-.historyDealsContainer{
+.historyDealsContainer {
   width: 100%;
   height: 23vh;
   display: flex;

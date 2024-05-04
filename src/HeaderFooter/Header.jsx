@@ -13,20 +13,25 @@ export default function Header() {
       setScrolled(isScrolled);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
-    <div className={`${scrolled ? styles.scrolledContainer : styles.container}`}>
+    <div
+      className={`${scrolled ? styles.scrolledContainer : styles.container}`}
+    >
       <div className={styles.wrapper}>
         <Link to="/">
           <img className={styles.HeaderIcon} src={HeaderIcon}></img>
         </Link>
         <div className={styles.menu}>
-          <Link style={{ textDecoration: "none", color: "white" }} to="/freedemo">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="/freedemo"
+          >
             <p className={styles.freeDemo}>FREE DEMO</p>
           </Link>
           <Link style={{ textDecoration: "none", color: "white" }} to="/about">
@@ -35,9 +40,12 @@ export default function Header() {
         </div>
         <div className={styles.regLog}>
           <div className={styles.lan}>
-            <Selector/>
+            <Selector />
           </div>
-          <Link style={{ textDecoration: "none", color: "white" }} to="/register">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="/register"
+          >
             <button className={styles.buttonReg}>Register</button>
           </Link>
           <Link style={{ textDecoration: "none", color: "white" }} to="/login">

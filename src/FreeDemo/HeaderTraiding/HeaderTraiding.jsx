@@ -1,13 +1,10 @@
 import React from "react";
 import styles from "../HeaderTraiding/headerTraiding.module.css";
 import HeaderIcon from "../../images/HeaderIcon.svg";
-import bmenu from "../../images/bmenu.svg";
-import bmenuWhite from "../../images/bmenuWhite.svg";
 import profileCircle from "../../images/profileCircle.png";
 import { Link } from "react-router-dom";
 import { HiChevronRight } from "react-icons/hi";
 import { useState } from "react";
-import { PiArrowRightThin } from "react-icons/pi";
 import arrow from "../../images/arrow.svg";
 import arrowrot from "../../images/arrowrot.svg";
 export default function HeaderTraiding({

@@ -27,3 +27,16 @@
   font-size: 3vw;
   color: white;
 }
+.customPrevButton {
+  position: absolute;
+  left: 20%;
+  top: 213vh;
+  width: 1vw;
+  transform: rotate(180deg);
+}
+.customNextButton {
+  position: absolute;
+  left: 78.5%;
+  top: 213vh;
+  width: 1vw;
+}

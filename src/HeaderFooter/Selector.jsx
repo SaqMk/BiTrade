@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../HeaderFooter/selector.module.css";
 import { HiChevronRight } from "react-icons/hi";
 
@@ -19,8 +19,6 @@ const Selector = () => {
   const toggleSelector = () => {
     setIsSelectorOpen(!isSelectorOpen);
   };
-  console.log(isSelectorOpen);
-
 
   const lanContent = [
     {
@@ -46,6 +44,19 @@ const Selector = () => {
     e.stopPropagation();
   };
 
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (panelRef.current && !panelRef.current.contains(event.target)) {
+        setIsSelectorOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  console.log(isSelectorOpen);
   return (
     <>
       <div

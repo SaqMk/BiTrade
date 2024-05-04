@@ -7,21 +7,19 @@ import ScrollTop from "./ScrollTop";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
 import FreeDemo from "./FreeDemo/FreeDemo";
-export default function App() { 
-
+export default function App() {
   return (
     <>
-    
-   <BrowserRouter>
-   <ScrollTop/>
-      <Routes>
-        <Route path="/" element={<Homepage />}/>
-        <Route path="freedemo" element={<FreeDemo />}/>
-        <Route path="about" element={<AboutUs />}/>
-        <Route path="register" element={<Register />}/>
-        <Route path="login" element={<Login />}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <ScrollTop />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="freedemo" element={<FreeDemo />} />
+          <Route path="about" element={<AboutUs />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

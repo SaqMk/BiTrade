@@ -53,12 +53,12 @@ export default function FreeDemo() {
           togglePanel={togglePanel}
           horizontalPanel={horizontalPanel}
         />
-       <div className={styles.ContentContainer}> 
+        <div className={styles.ContentContainer}>
           <HeaderTraidingSelector
             panelVisible={panelVisible}
             togglePanelV2={togglePanelV2}
             activeIndex={activeIndex}
-          /> 
+          />
           <HeaderTraidingSelectorV2
             horizontalPanel={horizontalPanel}
             activeIndex={activeIndex}

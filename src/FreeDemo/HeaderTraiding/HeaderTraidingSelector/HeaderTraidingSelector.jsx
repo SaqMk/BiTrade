@@ -17,11 +17,7 @@ import balanceDemo1 from "../../../images/balanceDemo1.svg";
 import accountCircleDemo1 from "../../../images/accountCircleDemo1.svg";
 import chatDemo1 from "../../../images/chatDemo1.svg";
 
-function HorizontalPanel({
-  panelVisible,
-  togglePanelV2,
-  activeIndex,
-}) {
+function HorizontalPanel({ panelVisible, togglePanelV2, activeIndex }) {
   const state = [
     {
       id: 1,
@@ -79,7 +75,6 @@ function HorizontalPanel({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   return (
     <div className={styles.horizontalPanel}>
