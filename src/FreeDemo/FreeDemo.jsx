@@ -26,7 +26,7 @@ export default function FreeDemo() {
   const togglePanelV2 = (ind) => {
     setHorizontalPanel(true);
     setActiveIndex(ind);
-    ind === 0 || ind === 2 || ind === 3 || ind === 5 || ind === 6
+    ind === 0 || ind === 3 || ind === 5 || ind === 6
       ? setHorizontalPanel(false)
       : setHorizontalPanel(true);
   };
@@ -39,7 +39,7 @@ export default function FreeDemo() {
     setShow((prevShow) => !prevShow); // Изменение show на противоположное значение
   };
 
-  console.log(show)
+  console.log(show);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -48,7 +48,6 @@ export default function FreeDemo() {
           togglePanel={togglePanel}
           horizontalPanel={horizontalPanel}
           activeIndex={activeIndex}
-
         />
         <div className={styles.ContentContainer}>
           <HeaderTraidingSelector
@@ -60,9 +59,9 @@ export default function FreeDemo() {
             horizontalPanel={horizontalPanel}
             activeIndex={activeIndex}
             panelVisible={panelVisible}
-            handleToggleShow ={handleToggleShow}
+            handleToggleShow={handleToggleShow}
             setShow={setShow}
-            show = {show}
+            show={show}
           />
           <GraphicContainer
             horizontalPanel={horizontalPanel}

@@ -12,6 +12,8 @@ import iconSecurityPass from "../../../../images/iconSecurityPass.svg";
 import iconVerifyPass from "../../../../images/iconVerifyPass.svg";
 import SecurityContainer from "./security/SecurityContainer";
 
+import moving from '../../../../images/moving.svg'
+
 function HeaderTraidingSelectorV2({
   horizontalPanel,
   activeIndex,
@@ -75,6 +77,8 @@ function HeaderTraidingSelectorV2({
   const handleItemClick = (index) => {
     setActiveIndexChange(index);
   };
+
+  console.log(activeIndex);
   return (
     <>
       <div
@@ -116,6 +120,19 @@ function HeaderTraidingSelectorV2({
             )}
           </div>
         )}
+        {activeIndex === 2 && (
+          <div className={styles.TopTradesContainer}>
+            <div className={styles.TopTradesWrapper}>
+              <p className={styles.TopTradesWrapper_Title}>Top traders</p>
+              <div className={styles.TopTradesWrapper_Mot}>
+                <p>YOU can do it too if they could !</p>
+                <img src={moving} alt="" />
+              </div>
+              <p className={styles.TopTradesWrapper_Period}>Period</p>
+            </div>
+            <div className={styles.TopTradesRankingWrapper}></div>
+          </div>
+        )}
         {activeIndex === 4 && (
           <div className={styles.walletContainer}>
             <div className={styles.walletWrapper}>
@@ -146,6 +163,7 @@ function HeaderTraidingSelectorV2({
           </div>
         )}
       </div>
+
       {activeIndex === 5 && (
         <>
           {activeIndexChange === 0 && (
@@ -155,9 +173,7 @@ function HeaderTraidingSelectorV2({
               show={show}
             />
           )}
-          {activeIndexChange === 1 && (
-            <SecurityContainer/>
-          )}
+          {activeIndexChange === 1 && <SecurityContainer />}
           <div
             style={{ height: `calc(${browserHeight}px - 5vw)` }}
             className={styles.controlProfile}
