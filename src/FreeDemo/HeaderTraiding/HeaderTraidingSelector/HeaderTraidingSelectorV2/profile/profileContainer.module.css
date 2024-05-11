@@ -3,10 +3,9 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  top: 14vh;
-  left: 10vw;
+  left: 11.2vw;
   width: 75vw;
-  height: 80vh;
+  height: 82vh;
   z-index: 50;
 }
 /* Account Information */

@@ -16,7 +16,7 @@ export default function HomeSectionDemo() {
           </Link>
         </div>
         <div className={styles.phoneImg}>
-          <img src={Macbook} />
+          <img src={Macbook} alt="" />
         </div>
       </div>
     </div>

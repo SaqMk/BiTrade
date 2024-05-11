@@ -38,11 +38,6 @@ export default function ProfileContainer() {
     const newInputValues = [...inputValues];
     newInputValues[index] = event.target.value;
     setInputValues(newInputValues);
-    if (event.target.value === "") {
-      const newShowInput = [...showInput];
-      newShowInput[index] = false;
-      setShowInput(newShowInput);
-    }
   };
 
   const handleInputClick = (index, type) => {
@@ -53,6 +48,26 @@ export default function ProfileContainer() {
     } else {
       const newShowInputAdd = [...showInputAdd];
       newShowInputAdd[index] = true;
+      setShowInputAdd(newShowInputAdd);
+    }
+  };
+
+  const handleInputBlur = (index, type) => {
+    if (type === "additional" && inputValues[index + 3] === "") {
+      const newShowInputAdd = [...showInputAdd];
+      newShowInputAdd[index] = false;
+      setShowInputAdd(newShowInputAdd);
+    }
+  };
+
+  const handleInputDotClick = (index, type) => {
+    if (type === "main" && inputValues[index] === "") {
+      const newShowInput = [...showInput];
+      newShowInput[index] = !showInput[index];
+      setShowInput(newShowInput);
+    } else if (type === "additional" && inputValues[index + 3] === "") {
+      const newShowInputAdd = [...showInputAdd];
+      newShowInputAdd[index] = !showInputAdd[index];
       setShowInputAdd(newShowInputAdd);
     }
   };
@@ -99,7 +114,7 @@ export default function ProfileContainer() {
                   }}
                 >
                   <p>{title}</p>
-                  {showInput[index] ? (
+                  {showInput[index] || !phoneNumber ? (
                     <input
                       className={styles.inputContantIndex}
                       type="text"
@@ -109,7 +124,7 @@ export default function ProfileContainer() {
                     />
                   ) : (
                     <div
-                      onClick={() => handleInputClick(index, "main")}
+                      onClick={() => handleInputDotClick(index, "main")}
                       style={{
                         cursor: "pointer",
                         display: "flex",
@@ -174,10 +189,11 @@ export default function ProfileContainer() {
                   onChange={(event) =>
                     handleInputChange(index + 3, event)
                   }
+                  onBlur={() => handleInputBlur(index, "additional")}
                 />
               ) : (
                 <div
-                  onClick={() => handleInputClick(index, "additional")}
+                  onClick={() => handleInputDotClick(index, "additional")}
                   style={{
                     cursor: "pointer",
                     display: "flex",

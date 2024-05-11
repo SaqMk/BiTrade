@@ -56,7 +56,6 @@ const Selector = () => {
     };
   }, []);
 
-  console.log(isSelectorOpen);
   return (
     <>
       <div

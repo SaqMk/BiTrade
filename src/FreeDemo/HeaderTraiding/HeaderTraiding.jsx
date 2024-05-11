@@ -11,11 +11,12 @@ export default function HeaderTraiding({
   togglePanel,
   panelVisible,
   horizontalPanel,
+  activeIndex,
 }) {
   const [isSelectorOpen, setIsSelectorOpen] = useState(false);
   const [lan, setLan] = useState("Demo");
   const [balanc, setBalanc] = useState("10000");
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex1, setActiveIndex1] = useState(0);
 
   const toggleSelector = () => {
     setIsSelectorOpen(!isSelectorOpen);
@@ -23,11 +24,11 @@ export default function HeaderTraiding({
   const handleLanguageSelect = (lang, bal, ind) => {
     setLan(lang);
     setBalanc(bal);
-    localStorage.setItem('balance', bal); // Сохраняем баланс в локальное хранилище
+    localStorage.setItem("balance", bal);
     setIsSelectorOpen(!isSelectorOpen);
-    setActiveIndex(ind);
+    setActiveIndex1(ind);
   };
-  
+
   const lanContent = [
     {
       id: 1,
@@ -40,22 +41,33 @@ export default function HeaderTraiding({
       balance: "0",
     },
   ];
+  console.log(activeIndex);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.iconContainer}>
-          <img
-            onClick={togglePanel}
-            src={panelVisible ? (horizontalPanel ? arrow : arrow) : arrowrot}
-            alt=" "
-            className={`${styles.burMenu} ${
-              panelVisible
-                ? horizontalPanel
-                  ? styles.secondMargin
-                  : styles.firstMargin
-                : ""
-            }`}
-          />
+          {activeIndex == 0 ||
+          activeIndex == 1 ||
+          activeIndex == 2 ||
+          activeIndex == 3 ||
+          activeIndex == 4 ||
+          activeIndex == 6 ? (
+            <img
+              onClick={togglePanel}
+              src={panelVisible ? (horizontalPanel ? arrow : arrow) : arrowrot}
+              alt=" "
+              className={`${styles.burMenu} ${
+                panelVisible
+                  ? horizontalPanel
+                    ? styles.secondMargin
+                    : styles.firstMargin
+                  : ""
+              }`}
+            />
+          ) : activeIndex == 5 ? null : (
+            <></>
+          )}
+
           <Link to="/">
             <img className={styles.headerIcon} alt="" src={HeaderIcon} />
           </Link>
@@ -93,32 +105,34 @@ export default function HeaderTraiding({
                         handleLanguageSelect(`${e.name}`, `${e.balance}`, ind)
                       }
                       className={`${
-                        activeIndex === ind
+                        activeIndex1 === ind
                           ? styles.activeContainer
                           : styles.passContainer
                       }`}
                     >
                       <div
                         className={`${styles.checkbox} ${
-                          activeIndex === ind ? styles.activeContainerCheck : ""
+                          activeIndex1 === ind
+                            ? styles.activeContainerCheck
+                            : ""
                         }`}
                       >
                         <div
                           className={`${styles.itemCheck} ${
-                            activeIndex === ind ? styles.active : ""
+                            activeIndex1 === ind ? styles.active : ""
                           }`}
                         ></div>
                       </div>
                       <li
                         className={`${styles.selectorItem} ${
-                          activeIndex === ind ? styles.activeTitle : ""
+                          activeIndex1 === ind ? styles.activeTitle : ""
                         }`}
                       >
                         {e.name}
                       </li>
                       <p
                         className={`${styles.selectorBalance} ${
-                          activeIndex === ind ? styles.activeBalanance : ""
+                          activeIndex1 === ind ? styles.activeBalanance : ""
                         }`}
                       >
                         ${e.balance}
