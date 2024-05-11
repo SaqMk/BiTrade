@@ -23,9 +23,11 @@ export default function HeaderTraiding({
   const handleLanguageSelect = (lang, bal, ind) => {
     setLan(lang);
     setBalanc(bal);
+    localStorage.setItem('balance', bal); // Сохраняем баланс в локальное хранилище
     setIsSelectorOpen(!isSelectorOpen);
     setActiveIndex(ind);
   };
+  
   const lanContent = [
     {
       id: 1,
@@ -38,7 +40,6 @@ export default function HeaderTraiding({
       balance: "0",
     },
   ];
-  console.log(horizontalPanel);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

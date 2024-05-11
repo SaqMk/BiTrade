@@ -1,0 +1,73 @@
+.securityContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 14vh;
+  left: 10vw;
+  width: 75vw;
+  height: 80vh;
+  z-index: 50;
+  background: linear-gradient(to bottom, #131714, #303c37);
+}
+.targetInformation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+  background-color: #b9b6b6;
+  font-size: 1.3vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.changePass {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30vw;
+  height: 55vh;
+  margin-left: 5vw;
+  margin-top: 2vw;
+}
+.changePass_title {
+  font-size: 1.3vw;
+  color: white;
+}
+.changePass_contantWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30vw;
+  height: 25vh;
+}
+.changePass_inputContainer {
+  width: 100%;
+  height: 5.7vh;
+  border-bottom: 0.1px solid gray;
+  transition: 0.5s;
+}
+.changePass_input {
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.changePass_inputContainer:hover {
+  box-shadow: 0 2px gray;
+  cursor: pointer;
+}
+.forgotPass_ph {
+  color: white;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.changePass button {
+  height: 7vh;
+  border-radius: 1.5vw;
+  border: none;
+  font-size: 1.3vw;
+  color: white;
+  background-color: #b0b0b0;
+  cursor: pointer;
+}

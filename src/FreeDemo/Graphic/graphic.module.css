@@ -6,11 +6,12 @@
   width: 88%;
   color: white;
 }
+
 .graphicTime {
+  margin-left: -15vw;
   height: 4vh;
   background-color: #383f3f;
   border-bottom: 0.1px solid #a1a09f;
-  z-index: 3;
 }
 .target {
   display: flex;
@@ -30,6 +31,11 @@
   border-radius: 0.3vw;
   padding: 0.2vw 0.4vw;
   cursor: pointer;
+  transition: 0.5s;
+}
+.targetPass:hover {
+  box-shadow: 0 2px gray;
+  cursor: pointer;
 }
 .graphicWrapper {
   height: 100%;
@@ -47,6 +53,7 @@
   background-color: #383f3f;
   padding-bottom: 1vw;
 }
+
 .selectWrapper {
   position: relative;
   display: flex;
